@@ -341,10 +341,11 @@ footer {
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(45, 106, 4, 0.95);
+    background: rgba(45, 106, 4, 0.98);
     padding: 20px;
     display: none;
     z-index: 99;
+    text-align: center;
   }
   .nav-links ul {
     flex-direction: column;
@@ -362,6 +363,7 @@ footer {
   .nav-barre {
     padding: 15px 20px;
     position: relative;
+    z-index: 10;
   }
   .subjects-row {
     flex-direction: column;
