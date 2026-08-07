@@ -1,0 +1,217 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+body {
+background-color: #eaf2ff;
+color: #333;
+}
+
+/* Header & Navbar */
+.hero {
+height: 100vh;
+background-size: cover;
+background-position: center;
+position: relative;
+color: white;
+}
+
+.nav-barre {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 50px;
+background: rgba(0, 0, 0, 0.4);
+}
+
+.logo img {
+height: 50px;
+}
+
+.nav-links ul {
+display: flex;
+list-style: none;
+align-items: center;
+gap: 20px;
+}
+
+.nav-links a {
+color: #d4af37;
+text-decoration: none;
+font-weight: bold;
+}
+
+.menu-icon, #menu-toggle {
+display: none;
+}
+
+.banner-text {
+position: absolute;
+top: 50%;
+left: 10%;
+transform: translateY(-50%);
+}
+
+.banner-text h2 {
+font-size: 4rem;
+letter-spacing: 2px;
+}
+
+.banner-text hr {
+border: 1px solid white;
+margin: 10px 0;
+}
+
+.banner-text p {
+font-size: 2.5rem;
+}
+
+/* Container Principal */
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 30px;
+padding: 40px 20px;
+}
+
+/* Accordéons (1ere année, 2e année, etc.) */
+.documents {
+width: 100%;
+max-width: 900px;
+}
+
+.accordion-item {
+margin-bottom: 20px;
+border-radius: 5px;
+overflow: hidden;
+}
+
+.accordion-toggle {
+display: none;
+}
+
+.accordion-header {
+display: block;
+padding: 20px;
+background: url('../images/inp.webp') center/cover;
+color: white;
+font-size: 1.5rem;
+cursor: pointer;
+text-align: left;
+box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.accordion-content {
+display: none;
+background: white;
+padding: 20px;
+}
+
+.accordion-toggle:checked ~ .accordion-content {
+display: block;
+}
+
+/* Cartes Cotisation et Pulls */
+.sidebar {
+display: flex;
+flex-direction: column;
+gap: 30px;
+width: 100%;
+max-width: 500px;
+}
+
+.card {
+background: #f4f6fc;
+border: 1px solid #ccc;
+border-radius: 8px;
+padding: 20px;
+text-align: center;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cota-card h3 {
+color: red;
+}
+
+.phone-numbers {
+margin: 15px 0;
+font-weight: bold;
+}
+
+.btn-info {
+display: inline-block;
+background-color: #d8c200;
+padding: 10px 20px;
+border-radius: 8px;
+cursor: pointer;
+margin-top: 10px;
+}
+
+#info-toggle {
+display: none;
+}
+
+.description-cota {
+display: none;
+font-size: 0.9rem;
+margin-top: 10px;
+}
+
+#info-toggle:checked ~ .description-cota {
+display: block;
+}
+
+.pull-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+margin-bottom: 15px;
+}
+
+.pull-grid img {
+width: 100%;
+border-radius: 4px;
+}
+
+.pull-card h3 {
+color: red;
+font-size: 1.1rem;
+font-style: italic;
+}
+
+/* Footer */
+footer {
+background-color: #c0c0c0;
+padding: 40px 20px 10px;
+text-align: center;
+}
+
+.footer-body {
+display: flex;
+justify-content: center;
+gap: 100px;
+margin: 30px 0;
+}
+
+.footer-col {
+text-align: left;
+}
+
+.footer-col ul {
+list-style: none;
+margin-top: 10px;
+}
+
+.footer-col a {
+text-decoration: none;
+color: #333;
+}
+
+.copyright {
+font-size: 0.8rem;
+margin-top: 20px;
+}
