@@ -11,55 +11,52 @@
 </head>
 <body>
 
-    <!-- Fond global -->
-    <div class="global-bg" style="background-image: url('assets/images/biblio.png');"></div>
+    <!-- Header / Navbar avec sa propre image (Colisée / Biblio) -->
+    <header class="hero" style="background-image: url('assets/images/tsa.webp');">
+        <nav class="nav-barre">
+            <div class="logo">
+                <img src="assets/images/tsa.webp" alt="Amicale TSA Logo" style="border-radius: 50%;">
+            </div>
 
-    <div class="content-wrapper">
-        <!-- Header / Navbar -->
-        <header>
-            <nav class="nav-barre">
-                <div class="logo">
-                    <img src="assets/images/tsa.webp" alt="Amicale TSA Logo" style="border-radius: 50%;">
-                </div>
+            <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" id="menu-toggle">
 
-                <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
-                <input type="checkbox" id="menu-toggle">
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">ACCUEIL</a></li>
+                    <li><a href="orientation.html">ORIENTATION</a></li>
+                    <li><a href="courses.html">BIBLIOTHÈQUE</a></li>
+                    <li class="social-contact">
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="mailto:contact@amicaletsa.ci"><i class="fa-thin fa-at"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-                <div class="nav-links">
-                    <ul>
-                        <li><a href="index.html">ACCUEIL</a></li>
-                        <li><a href="orientation.html">ORIENTATION</a></li>
-                        <li><a href="courses.html">BIBLIOTHÈQUE</a></li>
-                        <li class="social-contact">
-                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                            <a href="mailto:contact@amicaletsa.ci"><i class="fa-thin fa-at"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+        <section class="banner-text">
+            <h2>AMICALE TSA</h2>
+            <hr>
+            <p>La plateforme des TSA</p>
+            <a href="#" class="btn-drive" target="_blank" title="Lien Google Drive à venir"><i class="fa-brands fa-google-drive"></i> Accéder au Google Drive</a>
+        </section>
+    </header>
 
-            <section class="banner-text">
-                <h2>AMICALE TSA</h2>
-                <hr>
-                <p>La plateforme des TSA</p>
-                <a href="#" class="btn-drive" target="_blank" title="Lien Google Drive à venir"><i class="fa-brands fa-google-drive"></i> Accéder au Google Drive</a>
-            </section>
-        </header>
-
-        <!-- Contenu Principal -->
-        <main class="container">
+    <!-- Contenu Principal -->
+    <main class="container">
+        
+        <!-- Accordéon 1ere Année -->
+        <div class="accordion-item" style="background-image: url('assets/images/biblio.png');">
+            <input type="checkbox" id="btn-1" class="accordion-toggle">
+            <label for="btn-1" class="accordion-header">1ere Année</label>
             
-            <!-- Section d'une année -->
-            <div class="year-section">
-                <h3 class="year-title">1ere Année</h3>
-                
+            <div class="accordion-content">
                 <div class="subjects-row">
                     <!-- Matière 1 -->
                     <div class="subject-dropdown">
                         <label class="subject-toggle">Maths <i class="fas fa-caret-down"></i></label>
                         <div class="subject-menu">
-                            <!-- Catégorie -->
                             <div class="category">
                                 <label class="category-toggle">cours <i class="fas fa-caret-down"></i></label>
                                 <ul class="file-list">
@@ -133,10 +130,13 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Section 2e année -->
-            <div class="year-section mt-50">
-                <h3 class="year-title">2ème Année</h3>
+        <!-- Accordéon 2e Année -->
+        <div class="accordion-item" style="background-image: url('assets/images/biblio.png');">
+            <input type="checkbox" id="btn-2" class="accordion-toggle">
+            <label for="btn-2" class="accordion-header">2e Année</label>
+            <div class="accordion-content">
                 <div class="subjects-row">
                     <div class="subject-dropdown">
                         <label class="subject-toggle">Maths <i class="fas fa-caret-down"></i></label>
@@ -151,10 +151,13 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Section 3e année -->
-            <div class="year-section mt-50">
-                <h3 class="year-title">3ème Année</h3>
+        <!-- Accordéon 3e Année -->
+        <div class="accordion-item" style="background-image: url('assets/images/biblio.png');">
+            <input type="checkbox" id="btn-3" class="accordion-toggle">
+            <label for="btn-3" class="accordion-header">Special concours</label>
+            <div class="accordion-content">
                 <div class="subjects-row">
                     <div class="subject-dropdown">
                         <label class="subject-toggle">CCINP <i class="fas fa-caret-down"></i></label>
@@ -169,39 +172,39 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-        </main>
+    </main>
 
-        <!-- Footer -->
-        <footer>
-            <div class="footer-header">
-                <h3>Amicale TSA</h3>
-                <p>L'excellence au service des TSA</p>
-            </div>
-            
-            <div class="footer-body">
-                <div class="footer-col">
-                    <h4>Contactez-nous</h4>
-                    <ul>
-                        <li><a href="#"><i class="fa-brands fa-whatsapp"></i> 07 78 41 43 51</a></li>
-                        <li><a href="mailto:contact@amicaletsa.ci"><i class="fa-thin fa-at"></i> contact@amicaletsa.ci</a></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram Amicale TSA</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Liens-utiles</h4>
-                    <ul>
-                        <li><a href="https://www.etudiant.ent.inphb.ci">Espace étudiant INPHB</a></li>
-                        <li><a href="https://www.louislegrand.fr/">Louis Le Grand</a></li>
-                        <li><a href="https://www.enseignement.gouv.ci">Ministère de l'enseignement supérieur</a></li>
-                    </ul>
-                </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-header">
+            <h3>Amicale TSA</h3>
+            <p>L'excellence au service des TSA</p>
+        </div>
+        
+        <div class="footer-body">
+            <div class="footer-col">
+                <h4>Contactez-nous</h4>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i> 07 78 41 43 51</a></li>
+                    <li><a href="mailto:contact@amicaletsa.ci"><i class="fa-thin fa-at"></i> contact@amicaletsa.ci</a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram Amicale TSA</a></li>
+                </ul>
             </div>
 
-            <p class="copyright">Copyright 2024 Amicale TSA. Tous droits réservés.</p>
-        </footer>
-    </div>
+            <div class="footer-col">
+                <h4>Liens-utiles</h4>
+                <ul>
+                    <li><a href="https://www.etudiant.ent.inphb.ci">Espace étudiant INPHB</a></li>
+                    <li><a href="https://www.louislegrand.fr/">Louis Le Grand</a></li>
+                    <li><a href="https://www.enseignement.gouv.ci">Ministère de l'enseignement supérieur</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="copyright">Copyright 2024 Amicale TSA. Tous droits réservés.</p>
+    </footer>
 
     <script>
         AOS.init();

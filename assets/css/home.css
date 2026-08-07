@@ -5,23 +5,9 @@ box-sizing: border-box;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Background image is fixed on the body wrapper to stay while scrolling */
-.global-bg {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    z-index: -2;
-}
-
-/* Overlay sombre pour la lisibilité de la bibliothèque */
-.global-bg::after {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Assombri pour faire ressortir le blanc et cyan */
-    z-index: -1;
+body {
+    background-color: #eaf2ff;
+    color: #333;
 }
 
 .content-wrapper {
@@ -33,8 +19,24 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Header & Navbar */
-header {
+header.hero {
+    background-size: cover;
+    background-position: center;
+    position: relative;
     color: white;
+}
+
+header.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+header.hero > * {
+    position: relative;
+    z-index: 1;
 }
 
 .nav-barre {
@@ -42,7 +44,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background: rgba(0, 0, 0, 0.3); /* Transparent */
+    background: transparent;
 }
 
 .logo img {
@@ -64,7 +66,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #00cec9; /* Cyan */
+    color: #00cec9;
 }
 
 .menu-icon, #menu-toggle {
@@ -78,7 +80,6 @@ header {
 .banner-text h2 {
     font-size: 4rem;
     letter-spacing: 2px;
-    color: #ffffff;
 }
 
 .banner-text hr {
@@ -115,31 +116,72 @@ header {
 .container {
     flex: 1;
     padding: 40px 10%;
+}
+
+/* Accordions avec image de fond */
+.accordion-item {
+    margin-bottom: 30px;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
     color: white;
-}
-
-.mt-50 {
-    margin-top: 80px;
-}
-
-.year-section {
-    margin-bottom: 50px;
-}
-
-.year-title {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-    font-weight: normal;
+    /* Un peu d'ombre pour le texte par-dessus l'image */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
+.accordion-item::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.accordion-item > * {
+    position: relative;
+    z-index: 1;
+}
+
+.accordion-toggle {
+    display: none;
+}
+
+.accordion-header {
+    display: block;
+    font-size: 1.2rem;
+    padding: 40px 50px;
+    cursor: pointer;
+    font-weight: normal;
+    transition: background 0.3s;
+}
+
+.accordion-header:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.accordion-toggle:checked ~ .accordion-content {
+    max-height: 2000px; /* Grande valeur pour permettre l'expansion */
+    padding: 0 50px 50px 50px;
+}
+
+/* Menu horizontal à l'intérieur */
 .subjects-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px; /* Espace horizontal entre les matières */
+    gap: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
 }
 
-/* Menus déroulants imbriqués */
 .subject-dropdown {
     position: relative;
     min-width: 150px;
@@ -148,7 +190,6 @@ header {
 .subject-toggle {
     font-size: 1.1rem;
     cursor: pointer;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
     transition: color 0.3s;
     display: flex;
     align-items: center;
@@ -156,7 +197,7 @@ header {
 }
 
 .subject-toggle:hover {
-    color: #00cec9; /* Cyan */
+    color: #00cec9;
 }
 
 .subject-toggle i {
@@ -177,10 +218,9 @@ header {
 }
 
 .category-toggle {
-    color: #00cec9; /* Cyan comme sur la capture */
+    color: #00cec9;
     font-size: 1rem;
     cursor: pointer;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
     display: flex;
     align-items: center;
     gap: 5px;
@@ -213,7 +253,6 @@ header {
     color: white;
     text-decoration: none;
     font-size: 0.95rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
     transition: color 0.3s;
     line-height: 1.4;
     display: inline-block;
@@ -225,7 +264,7 @@ header {
 
 /* Footer */
 footer {
-    background-color: rgba(20, 20, 20, 0.8); /* Gris très sombre semi-transparent */
+    background-color: #2d6a04;
     color: white;
     padding: 50px 20px 20px;
     text-align: center;
@@ -235,11 +274,10 @@ footer {
 .footer-header h3 {
     font-size: 1.8rem;
     margin-bottom: 5px;
-    color: #4cd137;
 }
 
 .footer-header p {
-    color: #ccc;
+    color: #d1ecc0;
     font-size: 1rem;
 }
 
@@ -258,8 +296,7 @@ footer {
 .footer-col h4 {
     font-size: 1.2rem;
     margin-bottom: 15px;
-    color: #ffffff;
-    border-bottom: 2px solid #4cd137;
+    border-bottom: 2px solid #fff;
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -274,23 +311,23 @@ footer {
 
 .footer-col a {
     text-decoration: none;
-    color: #ccc;
+    color: white;
     transition: color 0.3s;
 }
 
 .footer-col a:hover {
-    color: white;
+    color: #bceb93;
 }
 
 .copyright {
     font-size: 0.9rem;
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    color: #888;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    color: #d1ecc0;
 }
 
-/* Responsive pour tablette et mobile */
+/* Responsive */
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
@@ -304,7 +341,7 @@ footer {
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(45, 106, 4, 0.95);
     padding: 20px;
     display: none;
     z-index: 99;
@@ -338,5 +375,11 @@ footer {
   }
   .footer-col {
     text-align: center;
+  }
+  .accordion-header {
+      padding: 30px 20px;
+  }
+  .accordion-toggle:checked ~ .accordion-content {
+      padding: 0 20px 30px 20px;
   }
 }
