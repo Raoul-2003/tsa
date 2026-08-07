@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!-- Ressources & À Propos - Bibliothèque TSA -->
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>  <meta name="description" content="Ressources, à propos et contact de la bibliothèque TSA pour accompagner les étudiants dans leur parcours académique."/>
+  <meta name="keywords" content="ressources TSA, à propos, contact bibliothèque, étudiants TSA"/>
+  <meta name="theme-color" content="#2d6a04"/>
+  <meta property="og:title" content="Ressources & À Propos — Bibliothèque TSA"/>
+  <meta property="og:description" content="Découvrez les ressources, l’équipe et les moyens de contacter la bibliothèque TSA."/>
+  <meta property="og:type" content="website"/>  <title>Ressources &amp; À Propos — Bibliothèque TSA</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css?v=1786090225635"/>
+
+  <!-- Google Fonts : Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body class="bg-background font-body-md text-on-background">
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• HEADER â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-16 max-w-max-width mx-auto px-sm lg:px-margin-desktop flex items-center justify-between gap-md">
+      <div class="flex items-center gap-xs">
+        <img alt="Logo Bibliothèque TSA" class="h-10 w-auto object-contain" src="assets/images/tsa.webp" width="40" height="40" loading="eager" decoding="async"/>
+        <span class="font-headline-sm text-primary">Bibliothèque TSA</span>
+      </div>
+      <nav class="hidden xl:flex items-center gap-md">
+        <a class="text-label-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">Accueil</a>
+        <a class="text-label-md text-on-surface-variant hover:text-primary transition-colors" href="courses.html">Cours &amp; Documents</a>
+        <a class="text-label-md text-on-surface-variant hover:text-primary transition-colors" href="orientation.html">Orientation</a>
+        <a class="text-label-md text-on-surface-variant hover:text-primary transition-colors" href="resources.html">Ressources</a>
+        <a class="text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#about">À Propos</a>
+        <a class="text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+      </nav>
+      <div class="flex items-center gap-sm">
+                <button class="p-base hover:bg-surface-container rounded-full transition-colors" aria-label="Changer le thème" data-theme-toggle>
+          <span class="material-symbols-outlined text-on-surface-variant">dark_mode</span>
+        </button>
+        <button class="xl:hidden p-base hover:bg-surface-container rounded-full transition-colors" aria-label="Menu" aria-expanded="false" data-nav-toggle>
+          <span class="material-symbols-outlined text-on-surface-variant">menu</span>
+        </button>
+        <button onclick="alert('L\'espace personnel sera bientôt disponible !')" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center hover:scale-105 transition-transform" aria-label="Profil">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile">
+      <a class="text-label-md text-on-surface-variant hover:text-primary transition-colors py-xs" href="index.html">Accueil</a>
+      <a class="text-label-md text-on-surface-variant hover:text-primary transition-colors py-xs" href="courses.html">Cours &amp; Documents</a>
+      <a class="text-label-md text-on-surface-variant hover:text-primary transition-colors py-xs" href="orientation.html">Orientation</a>
+      <a class="text-label-md text-on-surface-variant hover:text-primary transition-colors py-xs" href="resources.html">Ressources</a>
+      <a class="text-label-md text-on-surface-variant hover:text-primary transition-colors py-xs" href="#about">À Propos</a>
+      <a class="text-label-md text-on-surface-variant hover:text-primary transition-colors py-xs" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• MAIN â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <main class="relative pt-16 min-h-screen">
+    <div class="flex flex-col w-full relative overflow-hidden">
+
+      <!-- Hero / Intro -->
+      <section class="relative w-full pt-24 pb-xl px-sm lg:px-margin-desktop bg-surface z-10">
+        <div class="max-w-max-width mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+          <div class="lg:col-span-6 space-y-md">
+            <div class="inline-flex items-center gap-xs px-3 py-1 rounded-full bg-primary/10">
+              <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              <span class="font-label-sm text-primary uppercase tracking-widest">Base de connaissances</span>
+            </div>
+            <h1 class="font-display text-on-surface">
+              Enrichir les <span class="text-primary">Esprits</span><br/>
+              Grâce aux Ressources.
+            </h1>
+            <p class="font-body-lg text-on-surface-variant max-w-xl">
+              Plongez dans notre collection de supports académiques, des guides complets à la documentation officielle. Tout ce dont vous avez besoin pour l'excellence éducative au même endroit.
+            </p>
+            <div class="flex gap-4 pt-sm">
+              <a class="inline-flex items-center justify-center h-12 px-6 rounded-lg bg-primary text-on-primary font-label-md hover:bg-primary-container transition-all shadow-md hover:shadow-xl hover:-translate-y-1" href="#resources">
+                Explorer les Ressources
+              </a>
+              <a class="inline-flex items-center justify-center h-12 px-6 rounded-lg bg-surface text-primary font-label-md border border-outline-variant hover:bg-surface-container-low transition-all" href="#about">
+                En Savoir Plus
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-6 relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl">
+            <div class="bg-cover bg-center w-full h-full resources-hero-image"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 to-transparent"></div>
+            <!-- Floating badge — animation 'float' définie dans style.css -->
+            <div class="absolute bottom-8 right-8 bg-surface-container-lowest p-6 rounded-xl shadow-xl backdrop-blur-md flex items-center gap-4 animate-[float_4s_ease-in-out_infinite]">
+              <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+                <span class="material-symbols-outlined text-on-secondary-container icon-filled">description</span>
+              </div>
+              <div>
+                <div class="font-headline-md text-on-surface">5,400+</div>
+                <div class="font-label-sm text-on-surface-variant uppercase">Documents</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl -z-10 -translate-x-1/3 translate-y-1/3"></div>
+      </section>
+
+      <!-- Resources Bento Grid -->
+      <section class="w-full py-xl px-sm lg:px-margin-desktop bg-surface-container-low relative" id="resources">
+        <div class="max-w-max-width mx-auto">
+          <div class="mb-lg flex flex-col md:flex-row justify-between items-end gap-6">
+            <div>
+              <h2 class="font-headline-lg text-on-surface mb-xs">Ressources Académiques</h2>
+              <p class="font-body-md text-on-surface-variant">Une bibliothèque sélectionnée pour accompagner votre parcours d'apprentissage.</p>
+            </div>
+            <div class="flex gap-2">
+              <button class="p-2 rounded-full bg-surface shadow-sm text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">filter_list</span></button>
+              <button class="p-2 rounded-full bg-surface shadow-sm text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">sort</span></button>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter">
+            <!-- Card 1: Guides (Large) -->
+            <div class="xl:col-span-2 md:col-span-2 group bg-surface rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col md:flex-row">
+              <div class="md:w-1/2 h-64 md:h-auto relative">
+                <div class="bg-cover bg-center w-full h-full absolute inset-0 transform group-hover:scale-105 transition-transform duration-700 resources-card-image"></div>
+                <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500"></div>
+              </div>
+              <div class="p-8 md:w-1/2 flex flex-col justify-center bg-surface relative z-10">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center">
+                    <span class="material-symbols-outlined text-on-tertiary-container text-[16px]">menu_book</span>
+                  </span>
+                  <span class="font-label-sm text-tertiary uppercase tracking-wider">Complet</span>
+                </div>
+                <h3 class="font-headline-md text-on-surface mb-2">Guides d'étude &amp; Manuels</h3>
+                <p class="font-body-md text-on-surface-variant mb-6 flex-grow">Guides détaillés couvrant les sujets principaux du programme, les méthodologies et les meilleures pratiques. Lecture essentielle pour maîtriser des sujets complexes.</p>
+                <a class="inline-flex items-center gap-2 font-label-md text-primary group-hover:gap-3 transition-all" href="#">
+                  Consulter <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+            <!-- Card 2: Official Docs -->
+            <div class="group bg-primary rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative text-on-primary">
+              <div class="p-8 flex-grow z-10">
+                <div class="w-10 h-10 rounded-full bg-on-primary/20 flex items-center justify-center mb-6">
+                  <span class="material-symbols-outlined text-on-primary">verified_user</span>
+                </div>
+                <h3 class="font-headline-sm mb-2">Documentation Officielle</h3>
+                <p class="font-body-md opacity-90 mb-6">Règlements de l'université, calendriers académiques et politiques départementales. Toujours à jour.</p>
+              </div>
+              <div class="px-8 pb-8 z-10">
+                <a class="inline-flex items-center justify-center w-full h-12 rounded-lg bg-on-primary text-primary font-label-md hover:bg-surface-container-low transition-colors" href="#">Consulter les Docs</a>
+              </div>
+              <div class="absolute bottom-0 right-0 w-48 h-48 bg-on-primary/5 rounded-tl-full pointer-events-none"></div>
+              <svg class="absolute top-1/4 -right-4 w-32 h-32 text-on-primary/10" fill="currentColor" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-dasharray="4 4" stroke-width="2" class="animate-[spin_20s_linear_infinite]"></circle>
+              </svg>
+            </div>
+            <!-- Card 3: Présentations -->
+            <div class="group bg-surface rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative">
+              <div class="h-48 relative overflow-hidden">
+                <div class="bg-cover bg-center w-full h-full transform group-hover:scale-110 transition-transform duration-700 resources-card-image-alt"></div>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <div class="font-label-sm text-secondary mb-2 uppercase">Supports de Cours</div>
+                <h3 class="font-headline-sm text-on-surface mb-2">Présentations</h3>
+                <p class="font-body-md text-on-surface-variant mb-6 flex-grow">Diaporamas des cours magistraux et séminaires. Parfait pour des révisions rapides.</p>
+                <a class="inline-flex items-center gap-2 font-label-md text-secondary hover:text-primary transition-colors" href="#">Consulter <span class="material-symbols-outlined text-[18px]">open_in_new</span></a>
+              </div>
+            </div>
+            <!-- Card 4: Conference -->
+            <div class="group bg-surface rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative">
+              <div class="h-48 relative overflow-hidden">
+                <div class="bg-cover bg-center w-full h-full transform group-hover:scale-110 transition-transform duration-700 resources-card-image-third"></div>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <div class="font-label-sm text-primary-container mb-2 uppercase">Événements</div>
+                <h3 class="font-headline-sm text-on-surface mb-2">Supports de Conférence</h3>
+                <p class="font-body-md text-on-surface-variant mb-6 flex-grow">Articles, actes et documents supplémentaires des intervenants invités.</p>
+                <a class="inline-flex items-center gap-2 font-label-md text-primary-container hover:text-primary transition-colors" href="#">Consulter <span class="material-symbols-outlined text-[18px]">open_in_new</span></a>
+              </div>
+            </div>
+            <!-- Card 5: Drive -->
+            <div class="group bg-surface-container-highest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 p-8 flex flex-col justify-center items-center text-center relative">
+              <div class="w-16 h-16 rounded-2xl bg-surface shadow-md flex items-center justify-center mb-6 group-hover:-translate-y-2 transition-transform duration-300">
+                <img alt="Google Drive" class="w-8 h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkYuFfpxZLbYOlSBdlp8DRnZ8fXPWI27xWJjwmOVhHsCZdDbF0pu2AH04oNhkCKugGDPPv2ZhAM-FkkeeMrmgypBEvF_Ak7nRWMkw1tifdlfG_-4h1pveT3aQcGqkdJQLz4PzwUqDAriKn-qMoVFiNxubwq5lyWHUC8dcsajmjx01lBNAqnA7Q0crxSM77Qirn1fG81NmUF1TFCD5jqViHP6td4iEL7ej9hquNauh1AID7zT9I0aRc"/>
+              </div>
+              <h3 class="font-headline-sm text-on-surface mb-3">Stockage Cloud</h3>
+              <p class="font-body-md text-on-surface-variant mb-6">Accédez aux dossiers partagés pour les ensembles de données volumineux, les fichiers multimédias et les espaces de travail collaboratifs.</p>
+              <a class="inline-flex items-center justify-center px-6 h-10 rounded-full bg-surface text-on-surface-variant border border-outline-variant font-label-md hover:border-primary hover:text-primary transition-colors" href="#">Ouvrir le Drive</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="w-full py-xl px-sm lg:px-margin-desktop bg-surface relative overflow-hidden" id="about">
+        <div class="max-w-max-width mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl items-center">
+            <div class="lg:col-span-5 space-y-lg">
+              <div>
+                <h2 class="font-headline-lg text-on-surface mb-4">À propos de la Bibliothèque TSA</h2>
+                <p class="font-body-lg text-on-surface-variant">Notre mission est de démocratiser l'accès à des ressources académiques de haute qualité, en favorisant un environnement où étudiants et professeurs peuvent s'épanouir grâce au partage des connaissances.</p>
+              </div>
+              <div class="space-y-6">
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center mt-1">
+                    <span class="material-symbols-outlined text-secondary text-[20px]">target</span>
+                  </div>
+                  <div>
+                    <h4 class="font-headline-sm text-on-surface mb-1">Nos Objectifs</h4>
+                    <p class="font-body-md text-on-surface-variant">Centraliser tous les supports de cours, pour les rendre facilement consultables et accessibles 24/7 à tous les membres inscrits.</p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-full bg-tertiary-container/20 flex items-center justify-center mt-1">
+                    <span class="material-symbols-outlined text-tertiary text-[20px]">trending_up</span>
+                  </div>
+                  <div>
+                    <h4 class="font-headline-sm text-on-surface mb-1">Avantages Étudiants</h4>
+                    <p class="font-body-md text-on-surface-variant">Réduisez le temps passé à chercher des PDF. Restez à jour grâce aux notifications en temps réel lors de l'ajout de nouveaux documents.</p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center mt-1">
+                    <span class="material-symbols-outlined text-primary text-[20px]">group</span>
+                  </div>
+                  <div>
+                    <h4 class="font-headline-sm text-on-surface mb-1">L'Équipe (Promo 2024)</h4>
+                    <p class="font-body-md text-on-surface-variant">Maintenu par des étudiants bénévoles dévoués de la promotion actuelle, garantissant pertinence et qualité.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-7 relative h-[600px] w-full rounded-2xl overflow-hidden shadow-lg group">
+              <div class="bg-cover bg-center w-full h-full transition-transform duration-1000 group-hover:scale-105 resources-about-image"></div>
+              <div class="absolute -left-6 bottom-12 bg-surface p-6 rounded-xl shadow-xl w-64 hidden lg:block">
+                <div class="font-label-sm text-on-surface-variant uppercase mb-2">Étape importante</div>
+                <div class="font-headline-md text-primary mb-1">10k+</div>
+                <div class="text-sm text-on-surface-variant">Téléchargements ce semestre, accélérant l'apprentissage sur tout le campus.</div>
+                <div class="mt-4 h-1 w-full bg-surface-container rounded-full overflow-hidden">
+                  <div class="h-full bg-primary w-3/4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="w-full py-xl px-sm lg:px-margin-desktop bg-surface-container-low border-t border-outline-variant" id="contact">
+        <div class="max-w-max-width mx-auto">
+          <div class="text-center mb-xl">
+            <h2 class="font-headline-lg text-on-surface mb-2">Nous Contacter</h2>
+            <p class="font-body-md text-on-surface-variant">Vous avez des questions ou vous souhaitez contribuer ? Contactez-nous.</p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-lg">
+            <!-- Contact Form -->
+            <div class="bg-surface p-8 rounded-2xl shadow-sm">
+              <form class="space-y-6" data-contact-form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="flex flex-col gap-1">
+                    <label class="font-label-md text-on-surface" for="firstName">Prénom</label>
+                    <input id="firstName" name="firstName" class="h-12 px-4 rounded-lg bg-surface border border-outline-variant focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all font-body-md text-on-surface" placeholder="Jean" type="text" aria-invalid="false"/>
+                    <p class="min-h-4 text-sm text-error" data-error-for="firstName"></p>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <label class="font-label-md text-on-surface" for="lastName">Nom</label>
+                    <input id="lastName" name="lastName" class="h-12 px-4 rounded-lg bg-surface border border-outline-variant focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all font-body-md text-on-surface" placeholder="Dupont" type="text" aria-invalid="false"/>
+                    <p class="min-h-4 text-sm text-error" data-error-for="lastName"></p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <label class="font-label-md text-on-surface" for="email">Adresse Email</label>
+                  <input id="email" name="email" class="h-12 px-4 rounded-lg bg-surface border border-outline-variant focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all font-body-md text-on-surface" placeholder="jean@etudiant.edu" type="email" aria-invalid="false"/>
+                  <p class="min-h-4 text-sm text-error" data-error-for="email"></p>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <label class="font-label-md text-on-surface" for="message">Message</label>
+                  <textarea id="message" name="message" class="p-4 rounded-lg bg-surface border border-outline-variant focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all font-body-md text-on-surface resize-none" placeholder="Comment pouvons-nous vous aider ?" rows="4" aria-invalid="false"></textarea>
+                  <p class="min-h-4 text-sm text-error" data-error-for="message"></p>
+                </div>
+                <button class="w-full h-12 rounded-lg bg-primary text-on-primary font-label-md shadow-md hover:bg-primary-container transition-colors disabled:opacity-70 disabled:cursor-not-allowed" type="submit">Envoyer le Message</button>
+                <div class="fixed bottom-4 right-4 z-[60] pointer-events-none opacity-0 translate-y-4 transition-all duration-300" data-contact-toast role="status" aria-live="polite"></div>
+              </form>
+            </div>
+            <!-- Info & Map -->
+            <div class="flex flex-col gap-8">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-surface p-6 rounded-xl shadow-sm border border-outline-variant/50">
+                  <span class="material-symbols-outlined text-primary mb-3">mail</span>
+                  <h4 class="font-label-md text-on-surface mb-1">Nous envoyer un email</h4>
+                  <p class="text-sm text-on-surface-variant">contact@tsa-biblio.edu</p>
+                </div>
+                <div class="bg-surface p-6 rounded-xl shadow-sm border border-outline-variant/50">
+                  <span class="material-symbols-outlined text-primary mb-3">share</span>
+                  <h4 class="font-label-md text-on-surface mb-1">Réseaux Sociaux</h4>
+                  <div class="flex gap-3 mt-2">
+                    <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Twitter</a>
+                    <span class="text-outline-variant">•</span>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-grow rounded-2xl overflow-hidden shadow-sm border border-outline-variant/50 relative min-h-[300px]">
+                <iframe class="absolute inset-0 w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15822.464627447814!2d-5.28919!3d6.86241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfa72a818cbaab5b%3A0xc36517a61d102e3b!2sInstitut%20National%20Polytechnique%20F%C3%A9lix%20Houphou%C3%ABt-Boigny%20(INP-HB)!5e0!3m2!1sfr!2sci!4v1715000000000!5m2!1sfr!2sci" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm p-4 rounded-lg shadow-md pointer-events-none">
+                  <div class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-error mt-0.5 icon-filled">location_on</span>
+                    <div>
+                      <p class="font-headline-sm text-on-surface mb-xs">INP-HB Yamoussoukro</p>
+                      <p class="text-sm text-on-surface-variant">Cité Universitaire, Batiment A, Salle 104.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• FOOTER â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <footer class="bg-surface-container-low border-t border-outline-variant mt-xl">
+    <div class="max-w-max-width mx-auto px-sm lg:px-margin-desktop py-lg text-on-surface-variant">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-lg mb-lg">
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center gap-xs mb-md">
+            <img alt="Logo Bibliothèque TSA" class="h-10 w-auto object-contain" src="assets/images/tsa.webp" width="40" height="40" loading="eager" decoding="async"/>
+            <span class="font-headline-sm text-primary">TSA</span>
+          </div>
+          <p class="text-label-sm">Ressources académiques pour l'excellence éducative.</p>
+        </div>
+        <div>
+          <h4 class="font-headline-sm text-on-surface mb-md">Liens Rapides</h4>
+          <nav class="flex flex-col gap-xs">
+            <a class="text-label-md hover:text-primary" href="index.html">Accueil</a>
+            <a class="text-label-md hover:text-primary" href="courses.html">Cours &amp; Documents</a>
+            <a class="text-label-md hover:text-primary" href="orientation.html">Orientation</a>
+            <a class="text-label-md hover:text-primary" href="resources.html">Ressources</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="font-headline-sm text-on-surface mb-md">Réseaux</h4>
+          <div class="flex flex-col gap-xs">
+            <a class="text-label-md hover:text-primary flex items-center gap-xs" href="#"><span class="material-symbols-outlined text-[18px]">cloud_download</span> Google Drive</a>
+            <a class="text-label-md hover:text-primary flex items-center gap-xs" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span> GitHub</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-headline-sm text-on-surface mb-md">Contact</h4>
+          <p class="text-label-md">contact@tsa-biblio.edu</p>
+          <p class="text-label-md">Cité Universitaire, Bat A</p>
+        </div>
+      </div>
+      <div class="pt-md border-t border-outline-variant flex flex-col md:flex-row justify-between gap-md text-label-sm opacity-70">
+        <span>Â© 2024 Bibliothèque TSA. Tous droits réservés.</span>
+        <div class="flex gap-md">
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Conditions d'utilisation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS : module ES, point d'entrée unique -->
+  <script type="module" src="assets/js/app.js"></script>
+  <script>
+    window.emailjsConfig = window.emailjsConfig || {
+      serviceId: '',
+      templateId: '',
+      publicKey: ''
+    };
+  </script>
+  <!-- JS specifique pour le formulaire de contact -->
+  <script src="assets/js/contact-form.js"></script>
+</body>
+</html>
