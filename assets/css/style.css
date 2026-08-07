@@ -1,90 +1,72 @@
 /* ============================================================
    Bibliothèque TSA — Global Styles
-   Toutes les règles CSS custom extraites des 4 pages HTML.
-   Les classes Tailwind restent dans le HTML.
+   Inspiré de Label Prestige : blanc dominant, accent vert discret,
+   fond bleu-pâle très subtil.
    ============================================================ */
 
 /* ── Reset & Base ─────────────────────────────────────────── */
-html,
-body {
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
 }
 
+/* ── Typographie globale : Inter ────────────────────────── */
 body {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #111827;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 60%, #e8eeff 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh;
   overscroll-behavior: none;
 }
 
-main > :first-child {
-  margin-top: 0 !important;
+/* ── Header : fond blanc propre ─────────────────────────── */
+header {
+  background-color: rgba(255, 255, 255, 0.97) !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04) !important;
+  backdrop-filter: blur(12px) !important;
 }
 
-main > :last-child {
-  margin-bottom: 0 !important;
+/* ── Logo header : arrondi subtil ────────────── */
+header img[alt*="Logo"] {
+  border-radius: 10px;
+  border: 1.5px solid rgba(45, 106, 4, 0.18);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
 }
 
-/* Masquer la scrollbar (tous navigateurs) */
-::-webkit-scrollbar {
-  display: none;
-}
+main > :first-child { margin-top: 0 !important; }
+main > :last-child  { margin-bottom: 0 !important; }
 
+/* Masquer la scrollbar */
+::-webkit-scrollbar { display: none; }
 html {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 /* ── Keyframe Animations ──────────────────────────────────── */
-
-/* Utilisé sur index.html : hero text, stat-cards, feature-cards */
 @keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(2rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(2rem); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Utilisé sur resources.html : floating badge */
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
 }
 
-/* ── Dark Mode ────────────────────────────────────────────── */
-/*
-  Les variables CSS du dark mode sont définies ici.
-  Le JS (theme.js) ajoute/retire la classe .dark sur <html>.
-  Tailwind CDN ne supporte pas darkMode:'class' en config inline,
-  donc on surcharge manuellement les tokens de surface.
-*/
-html.dark {
-  color-scheme: dark;
-}
-
-body,
-header,
-footer,
-main,
-section,
-aside,
-button,
-a,
-input,
-textarea,
-select,
-.mobile-nav,
-.faq-content,
-.faq-icon,
-.stat-card,
-.feature-card {
+/* ── Transitions globales ─────────────────────────────────── */
+body, header, footer, main, section, aside,
+button, a, input, textarea, select,
+.mobile-nav, .faq-content, .faq-icon, .stat-card, .feature-card {
   transition:
     background-color 0.28s ease,
     color 0.28s ease,
@@ -92,355 +74,138 @@ select,
     box-shadow 0.28s ease;
 }
 
-html.dark body,
-html.dark .bg-background,
-html.dark .bg-surface {
-  background-color: #151e10;
+/* ── Dark Mode ────────────────────────────────────────────── */
+
+  background: linear-gradient(135deg, #0f172a 0%, #111827 60%, #1e1b4b 100%) !important;
+  color: #f1f5f9;
 }
 
-html.dark .bg-surface\/90 {
-  background-color: rgba(21, 30, 16, 0.9);
+  background-color: rgba(15, 23, 42, 0.97) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-html.dark .bg-surface-container-lowest,
-html.dark .mobile-nav {
-  background-color: #1f2b1a;
-}
 
-html.dark .bg-surface-container-lowest\/90 {
-  background-color: rgba(31, 43, 26, 0.9);
-}
 
-html.dark .bg-surface-container-low,
-html.dark .hover\:bg-surface-container-low:hover {
-  background-color: #243320;
-}
 
-html.dark .bg-surface-container,
-html.dark .hover\:bg-surface-container:hover {
-  background-color: #2a3b22;
-}
 
-html.dark .hover\:bg-surface-container\/20:hover {
-  background-color: rgba(42, 59, 34, 0.2);
-}
 
-html.dark .bg-surface-container-high {
-  background-color: #32472a;
-}
 
-html.dark .bg-surface-container-highest {
-  background-color: #3a5130;
-}
 
-html.dark .bg-primary {
-  background-color: #a3d977;
-}
 
-html.dark .hover\:bg-secondary:hover,
-html.dark .hover\:bg-primary-container:hover {
-  background-color: #b7f07a;
-}
 
-html.dark .bg-primary\/5 {
-  background-color: rgba(163, 217, 119, 0.05);
-}
 
-html.dark .bg-primary\/10,
-html.dark .hover\:bg-primary\/10:hover {
-  background-color: rgba(163, 217, 119, 0.1);
-}
-
-html.dark .bg-primary\/20,
-html.dark .bg-primary-container\/20 {
-  background-color: rgba(163, 217, 119, 0.2);
-}
-
-html.dark .bg-primary-fixed,
-html.dark .bg-primary-fixed\/25,
-html.dark .bg-primary-fixed\/40,
-html.dark .bg-primary-fixed\/60 {
-  background-color: rgba(200, 237, 170, 0.4);
-}
-
-html.dark .bg-secondary\/5 {
-  background-color: rgba(183, 240, 122, 0.05);
-}
-
-html.dark .bg-secondary\/10 {
-  background-color: rgba(183, 240, 122, 0.1);
-}
-
-html.dark .bg-secondary-container,
-html.dark .bg-secondary-container\/20 {
-  background-color: rgba(61, 146, 0, 0.28);
-}
-
-html.dark .bg-secondary-fixed,
-html.dark .bg-secondary-fixed\/20,
-html.dark .bg-secondary-fixed\/40 {
-  background-color: rgba(212, 245, 176, 0.35);
-}
-
-html.dark .bg-tertiary-container,
-html.dark .bg-tertiary-container\/20 {
-  background-color: rgba(255, 204, 143, 0.18);
-}
-
-html.dark .bg-tertiary-fixed,
-html.dark .bg-tertiary-fixed\/40,
-html.dark .bg-tertiary-fixed\/50 {
-  background-color: rgba(255, 229, 200, 0.28);
-}
-
-html.dark .bg-on-primary,
-html.dark .bg-on-primary\/20,
-html.dark .bg-on-primary\/5,
-html.dark .bg-white\/20 {
-  background-color: rgba(247, 251, 243, 0.16);
-}
-
-html.dark .bg-outline-variant\/30 {
-  background-color: rgba(127, 146, 117, 0.3);
-}
-
-html.dark body,
-html.dark .text-on-background,
-html.dark .text-on-surface {
-  color: #e8f5e1;
-}
-
-html.dark .text-on-surface-variant {
-  color: #c7d8bf;
-}
-
-html.dark .text-primary,
-html.dark .hover\:text-primary:hover {
-  color: #b7f07a;
-}
-
-html.dark .text-primary-container,
-html.dark .text-on-primary-fixed,
-html.dark .text-on-primary-fixed-variant,
-html.dark .text-on-secondary-fixed-variant {
-  color: #dff8cf;
-}
-
-html.dark .text-primary-fixed,
-html.dark .text-primary-fixed-dim,
-html.dark .hover\:text-secondary-fixed-dim:hover {
-  color: #d4f5b0;
-}
-
-html.dark .text-secondary {
-  color: #a3d977;
-}
-
-html.dark .text-tertiary,
-html.dark .text-on-tertiary-container,
-html.dark .text-on-tertiary-fixed-variant {
-  color: #ffcc8f;
-}
-
-html.dark .text-on-primary,
-html.dark .text-on-secondary-container {
-  color: #0a2400;
-}
-
-html.dark .text-outline-variant {
-  color: #8da182;
-}
-
-html.dark .text-error {
-  color: #ffb4ab;
-}
-
-html.dark .border-outline-variant,
-html.dark .border-outline-variant\/30,
-html.dark .border-outline-variant\/40,
-html.dark .border-outline-variant\/50,
-html.dark .border-surface-container\/50 {
-  border-color: rgba(127, 146, 117, 0.5);
-}
-
-html.dark .border-primary\/20,
-html.dark .border-primary-fixed\/30,
-html.dark .hover\:border-primary:hover {
-  border-color: rgba(183, 240, 122, 0.35);
-}
-
-html.dark .focus\:ring-secondary\/20:focus {
-  --tw-ring-color: rgba(183, 240, 122, 0.2);
-}
-
-html.dark .shadow-sm,
-html.dark .shadow-md,
-html.dark .shadow-lg,
-html.dark .shadow-xl,
-html.dark .shadow-2xl,
-html.dark .shadow-\[0_1px_8px_rgba\(0\,0\,0\,0\.04\)\],
-html.dark .shadow-\[0_4px_6px_-1px_rgba\(0\,0\,0\,0\.05\)\],
-html.dark .shadow-\[2px_0_12px_rgba\(0\,0\,0\,0\.03\)\] {
-  --tw-shadow-color: rgba(0, 0, 0, 0.45);
-}
 
 /* ── Hero Section ─────────────────────────────────────────── */
-
-/*
-  L'image de fond (#hero-bg-img) démarre à scale(1.05) via Tailwind
-  (classe scale-105 + transition-transform duration-[8000ms]).
-  Le JS (hero.js) retire le zoom et gère le parallax au scroll.
-  Aucune règle CSS supplémentaire requise ici — tout est piloté par JS.
-*/
-
 .hero-bg-image {
   background-image: url('../images/inp.webp');
 }
 
+.hero-overlay-main {
+  background-color: rgba(0, 0, 0, 0.20);
+}
+
+.hero-overlay-bottom {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.50) 0%, transparent 60%);
+}
+
 .hero-title {
   color: #ffffff;
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
-.hero-title-accent {
-  color: #b7f07a;
-}
+.hero-title-accent { color: #D8C3A5; } /* Sable/Beige for accent */
 
-.hero-copy {
-  color: rgba(255, 255, 255, 0.85);
-}
+.hero-copy { color: rgba(255, 255, 255, 0.92); }
 
 .hero-cta-outline {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
 }
 
 .hero-quick-links {
   color: rgba(255, 255, 255, 0.8);
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.hero-quick-link {
-  color: rgba(255, 255, 255, 0.8);
-}
+.hero-quick-link    { color: rgba(255, 255, 255, 0.8); }
+.hero-quick-separator { color: rgba(255, 255, 255, 0.35); }
 
-.hero-quick-separator {
-  color: rgba(255, 255, 255, 0.3);
-}
-
+/* ── Images de fond ──────────────────────────────────────── */
 .hero-visual-image {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d4/Cipaysage1.jpg');
 }
-
 .orientation-card-image {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cf/Abidjan_de_nuit.jpg');
 }
-
 .resources-hero-image {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/ac/Cultivateur_de_cacao_01.jpg');
 }
-
 .resources-card-image {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/8d/Cocoa_beans_drying_Mpenkro_2014_B002a.jpg');
 }
-
 .resources-card-image-alt {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/02/Women_smallholder_farmers_in_Kenya.jpg');
 }
-
 .resources-card-image-third {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a6/2010_FarmersDay_AshantiRegion_Ghana_5262946799.jpg');
 }
-
 .resources-about-image {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e0/Cocoa_Pods.JPG');
 }
 
-.resources-map-image {
-  background-image: url('https://images.unsplash.com/photo-1586771107584-5683a47ef35a?q=80&w=1200&auto=format&fit=crop'); /* Reused field image */
-}
+/* ── Utilitaires ─────────────────────────────────────────── */
+.icon-filled { font-variation-settings: 'FILL' 1; }
+.delay-100 { transition-delay: 100ms; }
+.delay-150 { transition-delay: 150ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
 
-.icon-filled {
-  font-variation-settings: 'FILL' 1;
-}
+a.no-underline { text-decoration: none; }
 
-.delay-100 {
-  transition-delay: 100ms;
-}
-
-.delay-150 {
-  transition-delay: 150ms;
-}
-
-.delay-200 {
-  transition-delay: 200ms;
-}
-
-.delay-300 {
-  transition-delay: 300ms;
-}
-
-/* ── Utilitaires complémentaires ─────────────────────────── */
-
-/* Supprime la décoration de lien sur les feature-cards */
-a.no-underline {
-  text-decoration: none;
-}
-
-/* Assure que les cartes de stat gardent leur opacité initiale
-   avant que l'IntersectionObserver ne déclenche l'animation */
 .stat-card,
 .feature-card,
-.feature-header {
-  opacity: 0;
-}
+.feature-header { opacity: 0; }
 
-/* Réinitialise l'opacité une fois l'animation déclenchée
-   (évite le flash en cas de rechargement partiel) */
 .stat-card.animated,
 .feature-card.animated,
-.feature-header.animated {
-  opacity: 1;
+.feature-header.animated { opacity: 1; }
+
+/* ── Cartes : blanches, ombres douces ─────────────────────── */
+.stat-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.feature-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+  border-color: rgba(92, 64, 51, 0.25);
 }
 
 /* ── FAQ Accordion ────────────────────────────────────────── */
-
-.faq-item {
-  cursor: pointer;
-}
-
-.faq-content {
-  display: none;
-}
-
-.faq-content.open {
-  display: block;
-}
-
-.faq-icon {
-  transition: transform 0.3s ease;
-}
-
-.faq-icon.rotated {
-  transform: rotate(180deg);
-}
+.faq-item { cursor: pointer; }
+.faq-content { display: none; }
+.faq-content.open { display: block; }
+.faq-icon { transition: transform 0.3s ease; }
+.faq-icon.rotated { transform: rotate(180deg); }
 
 /* ── Responsive : Menu Mobile ─────────────────────────────── */
-
-body.mobile-menu-open {
-  overflow: hidden;
-}
-
-html.mobile-menu-open {
-  overflow: hidden;
-}
+body.mobile-menu-open { overflow: hidden; }
+html.mobile-menu-open { overflow: hidden; }
 
 .mobile-nav-overlay {
   position: fixed;
   inset: 0;
   z-index: 35;
-  background: rgba(8, 15, 6, 0.45);
+  background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(4px);
   opacity: 0;
   pointer-events: none;
@@ -460,12 +225,12 @@ html.mobile-menu-open {
   left: 16px;
   right: 16px;
   background-color: #ffffff;
-  border: 1px solid rgba(107, 125, 96, 0.16);
-  border-radius: 20px;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.14);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
   padding: 14px;
   z-index: 40;
-  gap: 6px;
+  gap: 4px;
   max-height: 0;
   opacity: 0;
   pointer-events: none;
@@ -485,104 +250,91 @@ html.mobile-menu-open {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 10px;
-  border-radius: 12px;
-  color: #243320;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #374151;
   text-decoration: none;
+  font-weight: 500;
   transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .mobile-nav a:hover {
-  background-color: rgba(45, 106, 4, 0.08);
-  color: #2d6a04;
+  background-color: #F1ECE4;
+  color: #5C4033;
   transform: translateX(2px);
 }
 
 .mobile-nav a[aria-current='page'] {
-  background-color: rgba(45, 106, 4, 0.1);
-  color: #2d6a04;
+  background-color: #F1ECE4;
+  color: #5C4033;
   font-weight: 700;
 }
 
-[data-nav-toggle] {
-  transition: background-color 180ms ease, transform 180ms ease;
-}
+[data-nav-toggle] { transition: background-color 180ms ease, transform 180ms ease; }
+[data-nav-toggle].is-open { background-color: rgba(92, 64, 51, 0.1); }
+[data-nav-toggle] .material-symbols-outlined { transition: transform 180ms ease; }
+[data-nav-toggle].is-open .material-symbols-outlined { transform: rotate(180deg); }
 
-[data-nav-toggle].is-open {
-  background-color: rgba(45, 106, 4, 0.12);
-}
-
-[data-nav-toggle] .material-symbols-outlined {
-  transition: transform 180ms ease;
-}
-
-[data-nav-toggle].is-open .material-symbols-outlined {
-  transform: rotate(180deg);
-}
-
-/* ── Recherche de documents ─────────────────────────────── */
+/* ── Recherche ─────────────────────────────────────────────── */
 .search-shell {
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 1px solid rgba(107, 125, 96, 0.16);
+  border: 1.5px solid #e5e7eb;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 10px 14px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+  padding: 10px 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: border-color 200ms ease, box-shadow 200ms ease;
 }
 
-.search-shell .search-icon {
-  color: #2d6a04;
-  font-size: 22px;
+.search-shell:focus-within {
+  border-color: rgba(45, 106, 4, 0.5);
+  box-shadow: 0 2px 16px rgba(45, 106, 4, 0.12);
 }
 
-.search-shell input {
-  font: inherit;
-  color: #243320;
-}
-
-.search-shell input::placeholder {
-  color: #6d7a64;
-}
+.search-shell .search-icon { color: #6b7280; font-size: 22px; }
+.search-shell input { font: inherit; color: #111827; }
+.search-shell input::placeholder { color: #9ca3af; }
 
 .search-results-panel {
   margin-top: 12px;
-  border: 1px solid rgba(107, 125, 96, 0.16);
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
   padding: 12px;
-  backdrop-filter: blur(10px);
 }
 
-.search-results-list {
-  display: grid;
-  gap: 10px;
-}
-
-.search-group {
-  display: grid;
-  gap: 8px;
-}
+.search-results-list { display: grid; gap: 8px; }
+.search-group { display: grid; gap: 6px; }
 
 .search-group-title {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #2d6a04;
+  color: #5C4033;
   padding: 0 6px;
 }
+
+/* Scrollbar - Terre foncé & Beige */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #FAF8F3; }
+::-webkit-scrollbar-thumb { background: #E5DED5; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #D8C3A5; }
 
 .search-result-item {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   padding: 10px 12px;
-  border-radius: 14px;
-  background: rgba(45, 106, 4, 0.04);
+  border-radius: 10px;
+  background: #FAF8F3;
+  transition: background 150ms ease;
 }
+
+.search-result-item:hover { background: #EAE1D3; }
 
 .search-result-icon {
   display: flex;
@@ -590,113 +342,118 @@ html.mobile-menu-open {
   justify-content: center;
   width: 36px;
   height: 36px;
-  border-radius: 12px;
-  background: rgba(45, 106, 4, 0.1);
-  color: #2d6a04;
+  border-radius: 10px;
+  background: #F1ECE4;
+  color: #5C4033;
   flex-shrink: 0;
 }
 
-.search-result-content {
-  min-width: 0;
-}
+.search-result-content { min-width: 0; }
+.search-result-title { font-size: 0.95rem; font-weight: 600; color: #111827; }
+.search-result-detail { font-size: 0.84rem; color: #6b7280; margin-top: 3px; }
+.search-empty-state { display: flex; align-items: center; gap: 8px; padding: 12px; color: #9ca3af; }
 
-.search-result-title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #243320;
-}
+/* Dark mode search */
 
-.search-result-detail {
-  font-size: 0.84rem;
-  color: #6d7a64;
-  margin-top: 3px;
-}
-
-.search-empty-state {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px;
-  color: #6d7a64;
-}
-
-html.dark .search-shell {
-  background: rgba(31, 43, 26, 0.95);
-  border-color: rgba(127, 146, 117, 0.3);
-}
-
-html.dark .search-shell .search-icon,
-html.dark .search-result-icon,
-html.dark .search-group-title {
-  color: #b7f07a;
-}
-
-html.dark .search-shell input {
-  color: #e8f5e1;
-}
-
-html.dark .search-shell input::placeholder {
-  color: #aebfa8;
-}
-
-html.dark .search-results-panel {
-  background: rgba(31, 43, 26, 0.98);
-  border-color: rgba(127, 146, 117, 0.3);
-}
-
-html.dark .search-result-item {
-  background: rgba(183, 240, 122, 0.08);
-}
-
-html.dark .search-result-title {
-  color: #e8f5e1;
-}
-
-html.dark .search-result-detail {
-  color: #c7d8bf;
-}
-
-html.dark .mobile-nav {
-  background-color: #1e2a18;
-  border-color: rgba(183, 240, 122, 0.16);
-}
-
-html.dark .mobile-nav a {
-  color: #e8f5e1;
-}
-
-html.dark .mobile-nav a:hover,
-html.dark .mobile-nav a[aria-current='page'] {
-  background-color: rgba(183, 240, 122, 0.12);
-  color: #b7f07a;
-}
+/* Dark mode mobile nav */
 
 @media (min-width: 1280px) {
-  .mobile-nav,
-  .mobile-nav-overlay {
-    display: none !important;
-  }
+  .mobile-nav, .mobile-nav-overlay { display: none !important; }
 }
 
-/* ── Animations de chargement (Spin SVG resources.html) ───── */
+/* ── Animations ────────────────────────────────────────────── */
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 /* ── Print ────────────────────────────────────────────────── */
 @media print {
-  header,
-  footer,
-  .mobile-nav {
-    display: none !important;
-  }
+  header, footer, .mobile-nav { display: none !important; }
+  main { padding-top: 0 !important; }
+}
 
-  main {
-    padding-top: 0 !important;
+/* ══════════════════════════════════════════════════════════
+   SECTIONS INDEX.HTML — Amicale, Activités, Galerie
+   ══════════════════════════════════════════════════════════ */
+
+/* ── Section Amicale : colonnes ──────────────────────────── */
+.amicale-text-col,
+.amicale-img-col {
+  /* Les transitions d'entrée sont gérées par le JS inline */
+}
+
+/* ── Cartes d'activités ───────────────────────────────────── */
+.activite-card {
+  /* Transitions gérées par JS inline */
+}
+
+/* ── Galerie photos ─────────────────────────────────────── */
+.galerie-slot {
+  /* Transitions gérées par JS inline */
+}
+
+/* ── Section accès rapide : fond vert primaire ───────────── */
+#acces-rapide-section a,
+#acces-rapide-section div {
+  text-decoration: none;
+}
+
+/* ── Placeholders événements ────────────────────────────── */
+.event-card-placeholder {
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+
+/* ── Badge bg-primary/8 (Tailwind CDN ne supporte pas /8) ── */
+.bg-primary\/8 {
+  background-color: rgba(45, 106, 4, 0.08);
+}
+
+/* ── Section hero : responsive ───────────────────────────── */
+@media (max-width: 640px) {
+  #hero-section h1 {
+    font-size: 2.5rem;
+  }
+  #hero-section .flex-wrap {
+    flex-direction: column;
+  }
+  #hero-section .flex-wrap a {
+    width: 100%;
+    justify-content: center;
   }
 }
+
+/* ── Responsive : section amicale ────────────────────────── */
+@media (max-width: 1023px) {
+  .amicale-img-col .absolute.-bottom-4.-left-4 {
+    display: none;
+  }
+}
+
+/* ── Responsive : accès rapide mobile ───────────────────── */
+@media (max-width: 640px) {
+  #acces-rapide-section .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Dark mode : nouvelles sections ─────────────────────── */
+  background-color: #1e293b;
+}
+
+  background-color: #161616;
+}
+
+  background-color: #1e293b;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+  background-color: #1a2e0a;
+}
+

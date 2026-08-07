@@ -22,6 +22,7 @@ import { initObserver }   from './observer.js';
 import { initFaq }        from './faq.js';
 import { initCoursesPage } from './courses.js';
 import { initOrientationCards } from './orientation.js';
+import { initSchools } from './schools.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -31,4 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaq();
   initCoursesPage();
   initOrientationCards();
+  initSchools();
 });

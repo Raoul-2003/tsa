@@ -74,17 +74,21 @@
   function validateField(name, value) {
     const trimmedValue = String(value || '').trim();
 
-    if (name === 'firstName' || name === 'lastName') {
-      return trimmedValue.length >= 2 ? '' : 'Veuillez saisir au moins 2 caractères.';
+    if (name === 'firstName') {
+      return trimmedValue.length > 0 ? '' : 'Veuillez renseigner votre prénom.';
+    }
+
+    if (name === 'lastName') {
+      return trimmedValue.length > 0 ? '' : 'Veuillez renseigner votre nom.';
     }
 
     if (name === 'email') {
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailPattern.test(trimmedValue) ? '' : 'Veuillez saisir une adresse e-mail valide.';
+      return emailPattern.test(trimmedValue) ? '' : 'Veuillez renseigner une adresse email valide.';
     }
 
     if (name === 'message') {
-      return trimmedValue.length >= 10 ? '' : 'Veuillez écrire un message d’au moins 10 caractères.';
+      return trimmedValue.length > 0 ? '' : 'Veuillez saisir votre message.';
     }
 
     return '';
@@ -137,10 +141,9 @@
     const publicKey = getConfigValue('publicKey');
 
     if (!serviceId || !templateId || !publicKey) {
-      const subject = encodeURIComponent(`Nouveau message depuis la bibliothèque TSA`);
-      const body = encodeURIComponent(`Nom: ${formData.get('firstName')} ${formData.get('lastName')}\nEmail: ${formData.get('email')}\n\nMessage:\n${formData.get('message')}`);
-      window.location.href = `mailto:contact@tsa-biblio.edu?subject=${subject}&body=${body}`;
-      showToast('Votre client de messagerie a été ouvert. Merci pour votre message.', 'success');
+      // Pas de backend configuré : on affiche le message demandé
+      showToast('Votre message est prêt à être envoyé. Le service de contact sera connecté prochainement.', 'success');
+      form.reset();
       return;
     }
 
@@ -158,7 +161,7 @@
 
       form.reset();
       clearErrors();
-      showToast('Message envoyé avec succès. Nous vous répondrons bientôt.', 'success');
+      showToast('Votre message est prêt à être envoyé. Le service de contact sera connecté prochainement.', 'success');
     } catch (error) {
       console.error('EmailJS submission failed:', error);
       showToast('L’envoi a échoué. Veuillez réessayer plus tard.', 'error');

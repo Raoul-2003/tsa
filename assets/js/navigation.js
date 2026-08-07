@@ -22,7 +22,16 @@ function setActiveLinks() {
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
   document.querySelectorAll('header nav a, .mobile-nav a').forEach((link) => {
-    const linkPage = link.getAttribute('href')?.split('/').pop()?.split('#')[0] || '';
+    const fullHref = link.getAttribute('href') || '';
+    const hasHash = fullHref.includes('#');
+    const linkPage = fullHref.split('#')[0] || '';
+
+    // Ne pas marquer les liens d'ancre comme page active
+    if (hasHash) {
+      link.classList.remove('font-bold', 'text-primary');
+      link.setAttribute('aria-current', 'false');
+      return;
+    }
 
     // Cas de la page d'accueil
     const isHome =
@@ -35,8 +44,7 @@ function setActiveLinks() {
       link.classList.add('text-primary', 'font-bold');
       link.setAttribute('aria-current', 'page');
     } else {
-      // Retire les classes actives si elles avaient été posées en dur dans le HTML
-      link.classList.remove('font-bold');
+      link.classList.remove('font-bold', 'text-primary');
       link.setAttribute('aria-current', 'false');
     }
   });
