@@ -360,7 +360,7 @@ footer {
   .banner-text p {
     font-size: 1.5rem;
   }
-  .nav-barre {
+  header.hero .nav-barre {
     padding: 15px 20px;
     position: relative;
     z-index: 10;
