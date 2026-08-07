@@ -457,3 +457,39 @@ html.mobile-menu-open { overflow: hidden; }
   background-color: #1a2e0a;
 }
 
+
+/* -- Dark Mode Overrides -- */
+html.dark body { background-color: #1A1714 !important; color: #EAE1D3 !important; }
+html.dark .bg-white, html.dark .bg-surface, html.dark .bg-surface-bright { background-color: #24201C !important; }
+html.dark .bg-surface-container-low, html.dark .bg-surface-container, html.dark .bg-surface-variant { background-color: #2C2723 !important; }
+html.dark .bg-surface-container-high { background-color: #352F2A !important; }
+
+html.dark .text-on-surface, html.dark .text-on-background { color: #F1ECE4 !important; }
+html.dark .text-on-surface-variant { color: #D8C3A5 !important; }
+html.dark .text-primary { color: #D8C3A5 !important; }
+html.dark .text-tertiary { color: #E5DED5 !important; }
+html.dark .text-on-primary-fixed-variant { color: #D8C3A5 !important; }
+html.dark .text-on-secondary-fixed-variant { color: #E5DED5 !important; }
+
+html.dark .border-outline-variant\/60, html.dark .border-outline-variant\/50, html.dark .border-outline-variant\/40 { border-color: rgba(216, 195, 165, 0.15) !important; }
+html.dark .border-outline-variant { border-color: #4A423B !important; }
+html.dark .border-outline-variant\/30 { border-color: rgba(216, 195, 165, 0.1) !important; }
+html.dark .border-primary\/15 { border-color: rgba(216, 195, 165, 0.2) !important; }
+
+html.dark .bg-primary\/10 { background-color: rgba(216, 195, 165, 0.15) !important; }
+html.dark .bg-primary\/8 { background-color: rgba(216, 195, 165, 0.10) !important; }
+html.dark .bg-primary\/5 { background-color: rgba(216, 195, 165, 0.05) !important; }
+html.dark .bg-tertiary-fixed\/60 { background-color: rgba(229, 222, 213, 0.15) !important; }
+html.dark .bg-secondary-fixed\/50 { background-color: rgba(241, 236, 228, 0.15) !important; }
+html.dark .bg-primary-fixed\/50 { background-color: rgba(216, 195, 165, 0.15) !important; }
+
+html.dark .shadow-sm, html.dark .shadow-lg, html.dark .shadow-xl { box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important; }
+
+/* Menu Mobile */
+html.dark .mobile-nav { background-color: #24201C !important; border-color: #352F2A !important; }
+html.dark .mobile-nav a { color: #F1ECE4 !important; }
+html.dark .mobile-nav a:hover, html.dark .mobile-nav a[aria-current='page'] { background-color: #352F2A !important; color: #D8C3A5 !important; }
+html.dark [data-nav-toggle].is-open { background-color: rgba(216, 195, 165, 0.15) !important; }
+
+/* Footer */
+html.dark footer { background-color: #110E0C !important; border-top-color: #24201C !important; }
