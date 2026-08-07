@@ -11,122 +11,214 @@
 </head>
 <body>
 
-    <!-- Header / Navbar -->
-    <header class="hero" style="background-image: url('assets/images/biblio.png');">
-        <nav class="nav-barre">
-            <div class="logo">
-                <img src="assets/images/tsa.webp" alt="Amicale TSA Logo" style="border-radius: 50%;">
-            </div>
+    <!-- Fond global -->
+    <div class="global-bg" style="background-image: url('assets/images/biblio.png');"></div>
 
-            <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
-            <input type="checkbox" id="menu-toggle">
+    <div class="content-wrapper">
+        <!-- Header / Navbar -->
+        <header>
+            <nav class="nav-barre">
+                <div class="logo">
+                    <img src="assets/images/tsa.webp" alt="Amicale TSA Logo" style="border-radius: 50%;">
+                </div>
 
-            <div class="nav-links">
-                <ul>
-                    <li><a href="index.html">ACCUEIL</a></li>
-                    <li><a href="orientation.html">ORIENTATION</a></li>
-                    <li><a href="courses.html">BIBLIOTHÈQUE</a></li>
-                    <li class="social-contact">
-                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="mailto:contact@amicaletsa.ci"><i class="fa-thin fa-at"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+                <input type="checkbox" id="menu-toggle">
 
-        <section class="banner-text">
-            <h2>AMICALE TSA</h2>
-            <hr>
-            <p>La plateforme des TSA</p>
-            <a href="#" class="btn-drive" target="_blank" title="Lien Google Drive à venir"><i class="fa-brands fa-google-drive"></i> Accéder au Google Drive</a>
-        </section>
-    </header>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">ACCUEIL</a></li>
+                        <li><a href="orientation.html">ORIENTATION</a></li>
+                        <li><a href="courses.html">BIBLIOTHÈQUE</a></li>
+                        <li class="social-contact">
+                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="mailto:contact@amicaletsa.ci"><i class="fa-thin fa-at"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-    <!-- Contenu Principal -->
-    <main class="container">
-        <!-- Sections Téléchargements / Accordéons -->
-        <section class="documents">
-            <!-- 1ere Année -->
-            <div class="accordion-item">
-                <input type="checkbox" id="btn-1" class="accordion-toggle">
-                <label for="btn-1" class="accordion-header">1ère Année</label>
-                <div class="accordion-content">
-                    <div class="subject">
-                        <h4>Maths <i class="fas fa-caret-down"></i></h4>
-                        <ul class="file-list">
-                            <li><a href="https://www.mediafire.com/file/m9co8lmp41n5wcz/%255BJ.M.Monier%255D_analyse2_mpsi%2528BookFi%2529.pdf/file">Jean Marie monier analyse 2</a></li>
-                            <li><a href="livre/Analyse (MP) by Jean-Marie Monier (z-lib.org) (1).pdf">Jean-Marie Monier Analyse</a></li>
-                            <li><a href="livre/Cours_Mathematiques_MPSI.pdf">Mon cours sup</a></li>
-                        </ul>
+            <section class="banner-text">
+                <h2>AMICALE TSA</h2>
+                <hr>
+                <p>La plateforme des TSA</p>
+                <a href="#" class="btn-drive" target="_blank" title="Lien Google Drive à venir"><i class="fa-brands fa-google-drive"></i> Accéder au Google Drive</a>
+            </section>
+        </header>
+
+        <!-- Contenu Principal -->
+        <main class="container">
+            
+            <!-- Section d'une année -->
+            <div class="year-section">
+                <h3 class="year-title">1ere Année</h3>
+                
+                <div class="subjects-row">
+                    <!-- Matière 1 -->
+                    <div class="subject-dropdown">
+                        <label class="subject-toggle">Maths <i class="fas fa-caret-down"></i></label>
+                        <div class="subject-menu">
+                            <!-- Catégorie -->
+                            <div class="category">
+                                <label class="category-toggle">cours <i class="fas fa-caret-down"></i></label>
+                                <ul class="file-list">
+                                    <li><a href="livre/Cours_Mathematiques_MPSI.pdf">Mon cours sup</a></li>
+                                    <li><a href="https://www.mediafire.com/file/.../file">Jean Marie monier analyse 2</a></li>
+                                </ul>
+                            </div>
+                            <div class="category">
+                                <label class="category-toggle">Livre <i class="fas fa-caret-down"></i></label>
+                                <ul class="file-list">
+                                    <li><a href="livre/Analyse.pdf">Jean-Marie Monier Analyse</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Matière 2 -->
+                    <div class="subject-dropdown">
+                        <label class="subject-toggle">Physique <i class="fas fa-caret-down"></i></label>
+                        <div class="subject-menu">
+                            <div class="category">
+                                <label class="category-toggle">cours <i class="fas fa-caret-down"></i></label>
+                                <ul class="file-list">
+                                    <li><a href="#">Mécanique du point</a></li>
+                                    <li><a href="#">Optique géométrique</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Matière 3 -->
+                    <div class="subject-dropdown">
+                        <label class="subject-toggle">Chimie <i class="fas fa-caret-down"></i></label>
+                        <div class="subject-menu">
+                            <div class="category">
+                                <label class="category-toggle">cours <i class="fas fa-caret-down"></i></label>
+                                <ul class="file-list">
+                                    <li><a href="#">Atomistique</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Matière 4 -->
+                    <div class="subject-dropdown">
+                        <label class="subject-toggle">Science industrielle <i class="fas fa-caret-down"></i></label>
+                        <div class="subject-menu">
+                            <div class="category">
+                                <label class="category-toggle">cours <i class="fas fa-caret-down"></i></label>
+                                <ul class="file-list">
+                                    <li><a href="#">Bibliographies (6)</a></li>
+                                    <li><a href="#">Chap 1 Generalités</a></li>
+                                    <li><a href="#">Chap 2 Representations graphiques</a></li>
+                                    <li><a href="#">Chap 3 Décodage d'un dessin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Matière 5 -->
+                    <div class="subject-dropdown">
+                        <label class="subject-toggle">Informatique <i class="fas fa-caret-down"></i></label>
+                        <div class="subject-menu">
+                            <div class="category">
+                                <label class="category-toggle">cours <i class="fas fa-caret-down"></i></label>
+                                <ul class="file-list">
+                                    <li><a href="#">Algorithmique</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 2e Année -->
-            <div class="accordion-item">
-                <input type="checkbox" id="btn-2" class="accordion-toggle">
-                <label for="btn-2" class="accordion-header">2ème Année</label>
-                <div class="accordion-content">
-                    <div class="subject">
-                        <h4>Maths <i class="fas fa-caret-down"></i></h4>
-                        <ul class="file-list">
-                            <li><a href="Livre2/Analyse (MP) by Jean-Marie Monier (z-lib.org).pdf">Analyse (MP) Monier</a></li>
-                        </ul>
+            <!-- Section 2e année -->
+            <div class="year-section mt-50">
+                <h3 class="year-title">2ème Année</h3>
+                <div class="subjects-row">
+                    <div class="subject-dropdown">
+                        <label class="subject-toggle">Maths <i class="fas fa-caret-down"></i></label>
+                        <div class="subject-menu">
+                            <div class="category">
+                                <label class="category-toggle">cours <i class="fas fa-caret-down"></i></label>
+                                <ul class="file-list">
+                                    <li><a href="Livre2/Analyse (MP) by Jean-Marie Monier (z-lib.org).pdf">Analyse (MP) Monier</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 3ème Année -->
-            <div class="accordion-item">
-                <input type="checkbox" id="btn-3" class="accordion-toggle">
-                <label for="btn-3" class="accordion-header">3ème Année</label>
-                <div class="accordion-content">
-                    <div class="subject">
-                        <h4>CCINP <i class="fas fa-caret-down"></i></h4>
-                        <ul class="file-list">
-                            <li><a href="banque ccp/banque-ccp-avec-corriges.pdf">Banque CCP avec corrigés</a></li>
-                        </ul>
+            <!-- Section 3e année -->
+            <div class="year-section mt-50">
+                <h3 class="year-title">3ème Année</h3>
+                <div class="subjects-row">
+                    <div class="subject-dropdown">
+                        <label class="subject-toggle">CCINP <i class="fas fa-caret-down"></i></label>
+                        <div class="subject-menu">
+                            <div class="category">
+                                <label class="category-toggle">Annales <i class="fas fa-caret-down"></i></label>
+                                <ul class="file-list">
+                                    <li><a href="banque ccp/banque-ccp-avec-corriges.pdf">Banque CCP avec corrigés</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
 
+        </main>
 
-    </main>
+        <!-- Footer -->
+        <footer>
+            <div class="footer-header">
+                <h3>Amicale TSA</h3>
+                <p>L'excellence au service des TSA</p>
+            </div>
+            
+            <div class="footer-body">
+                <div class="footer-col">
+                    <h4>Contactez-nous</h4>
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-whatsapp"></i> 07 78 41 43 51</a></li>
+                        <li><a href="mailto:contact@amicaletsa.ci"><i class="fa-thin fa-at"></i> contact@amicaletsa.ci</a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram Amicale TSA</a></li>
+                    </ul>
+                </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-header">
-            <h3>Amicale TSA</h3>
-            <p>L'excellence au service des TSA</p>
-        </div>
-        
-        <div class="footer-body">
-            <div class="footer-col">
-                <h4>Contactez-nous</h4>
-                <ul>
-                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i> 07 78 41 43 51</a></li>
-                    <li><a href="mailto:contact@amicaletsa.ci"><i class="fa-thin fa-at"></i> contact@amicaletsa.ci</a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram Amicale TSA</a></li>
-                </ul>
+                <div class="footer-col">
+                    <h4>Liens-utiles</h4>
+                    <ul>
+                        <li><a href="https://www.etudiant.ent.inphb.ci">Espace étudiant INPHB</a></li>
+                        <li><a href="https://www.louislegrand.fr/">Louis Le Grand</a></li>
+                        <li><a href="https://www.enseignement.gouv.ci">Ministère de l'enseignement supérieur</a></li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="footer-col">
-                <h4>Liens-utiles</h4>
-                <ul>
-                    <li><a href="https://www.etudiant.ent.inphb.ci">Espace étudiant INPHB</a></li>
-                    <li><a href="https://www.louislegrand.fr/">Louis Le Grand</a></li>
-                    <li><a href="https://www.enseignement.gouv.ci">Ministère de l'enseignement supérieur</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <p class="copyright">Copyright 2024 Amicale TSA. Tous droits réservés.</p>
-    </footer>
+            <p class="copyright">Copyright 2024 Amicale TSA. Tous droits réservés.</p>
+        </footer>
+    </div>
 
     <script>
         AOS.init();
+        
+        // Gérer l'ouverture des menus (hover ou click)
+        document.querySelectorAll('.subject-toggle').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            })
+        });
+        document.querySelectorAll('.category-toggle').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            })
+        });
     </script>
 </body>
 </html>

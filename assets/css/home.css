@@ -2,365 +2,292 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: Arial, sans-serif;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-background-color: #ffffff; /* Fond blanc dominant */
-color: #333;
+/* Background image is fixed on the body wrapper to stay while scrolling */
+.global-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -2;
+}
+
+/* Overlay sombre pour la lisibilité de la bibliothèque */
+.global-bg::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Assombri pour faire ressortir le blanc et cyan */
+    z-index: -1;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header & Navbar */
-.hero {
-height: 100vh;
-background-size: cover;
-background-position: center;
-position: relative;
-color: white;
-}
-
-/* Un overlay sombre pour rendre le texte lisible sur l'image tsa.webp */
-.hero::before {
-content: "";
-position: absolute;
-top: 0; left: 0; right: 0; bottom: 0;
-background: rgba(0, 0, 0, 0.5);
-z-index: 0;
-}
-
-.hero > * {
-position: relative;
-z-index: 1;
+header {
+    color: white;
 }
 
 .nav-barre {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 50px;
-background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.3); /* Transparent */
 }
 
 .logo img {
-height: 50px;
+    height: 50px;
 }
 
 .nav-links ul {
-display: flex;
-list-style: none;
-align-items: center;
-gap: 20px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
 }
 
 .nav-links a {
-color: #ffffff;
-text-decoration: none;
-font-weight: bold;
-transition: color 0.3s;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-color: #2d6a04; /* Touche de vert au survol */
+    color: #00cec9; /* Cyan */
 }
 
 .menu-icon, #menu-toggle {
-display: none;
+    display: none;
 }
 
 .banner-text {
-position: absolute;
-top: 50%;
-left: 10%;
-transform: translateY(-50%);
+    padding: 60px 10%;
 }
 
 .banner-text h2 {
-font-size: 4rem;
-letter-spacing: 2px;
-color: #ffffff;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    color: #ffffff;
 }
 
 .banner-text hr {
-border: 1px solid #2d6a04; /* Ligne verte */
-margin: 10px 0;
-width: 100px;
-border-width: 3px;
+    border: 1px solid #4cd137;
+    margin: 10px 0;
+    width: 100px;
+    border-width: 3px;
 }
 
 .banner-text p {
-font-size: 2.5rem;
+    font-size: 2.5rem;
 }
 
-/* Bouton Google Drive */
 .btn-drive {
-display: inline-flex;
-align-items: center;
-gap: 10px;
-margin-top: 20px;
-padding: 12px 25px;
-background-color: #2d6a04;
-color: white;
-text-decoration: none;
-font-size: 1.2rem;
-border-radius: 30px;
-font-weight: bold;
-transition: background 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #2d6a04;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s;
 }
+
 .btn-drive:hover {
-background-color: #1a4202;
+    background-color: #1a4202;
 }
 
-/* Container Principal */
+/* Main Container (Les cours) */
 .container {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-gap: 40px;
-padding: 50px 20px;
-max-width: 1200px;
-margin: 0 auto;
+    flex: 1;
+    padding: 40px 10%;
+    color: white;
 }
 
-/* Accordéons (1ere année, 2e année, etc.) */
-.documents {
-flex: 2;
-min-width: 300px;
+.mt-50 {
+    margin-top: 80px;
 }
 
-.accordion-item {
-margin-bottom: 20px;
-border-radius: 8px;
-overflow: hidden;
-box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+.year-section {
+    margin-bottom: 50px;
 }
 
-.accordion-toggle {
-display: none;
+.year-title {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
-.accordion-header {
-display: block;
-padding: 20px;
-background-color: #2d6a04; /* Vert Amicale */
-color: white;
-font-size: 1.5rem;
-font-weight: bold;
-cursor: pointer;
-text-align: left;
+.subjects-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px; /* Espace horizontal entre les matières */
 }
 
-.accordion-header:hover {
-background-color: #255803;
+/* Menus déroulants imbriqués */
+.subject-dropdown {
+    position: relative;
+    min-width: 150px;
 }
 
-.accordion-content {
-display: none;
-background: #f9f9f9;
-padding: 20px;
-border: 1px solid #eee;
-border-top: none;
+.subject-toggle {
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.accordion-toggle:checked ~ .accordion-content {
-display: block;
+.subject-toggle:hover {
+    color: #00cec9; /* Cyan */
 }
 
-.subject h4 {
-font-size: 1.2rem;
-color: #2d6a04;
-margin-bottom: 15px;
-border-bottom: 2px solid #2d6a04;
-display: inline-block;
-padding-bottom: 5px;
+.subject-toggle i {
+    font-size: 0.8rem;
+}
+
+.subject-menu {
+    display: none;
+    padding-top: 20px;
+}
+
+.subject-dropdown.active > .subject-menu {
+    display: block;
+}
+
+.category {
+    margin-bottom: 15px;
+}
+
+.category-toggle {
+    color: #00cec9; /* Cyan comme sur la capture */
+    font-size: 1rem;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.category-toggle:hover {
+    color: white;
+}
+
+.category-toggle i {
+    font-size: 0.7rem;
 }
 
 .file-list {
-list-style: none;
-padding-left: 10px;
+    display: none;
+    list-style: none;
+    padding-top: 10px;
+    margin-top: 5px;
+}
+
+.category.active > .file-list {
+    display: block;
 }
 
 .file-list li {
-margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .file-list a {
-color: #333;
-text-decoration: none;
-display: flex;
-align-items: center;
-}
-
-.file-list a::before {
-content: "\f15b";
-font-family: "Font Awesome 6 Free";
-font-weight: 400;
-margin-right: 10px;
-color: #2d6a04;
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    transition: color 0.3s;
+    line-height: 1.4;
+    display: inline-block;
 }
 
 .file-list a:hover {
-color: #2d6a04;
-text-decoration: underline;
-}
-
-/* Cartes Cotisation et Pulls */
-.sidebar {
-flex: 1;
-display: flex;
-flex-direction: column;
-gap: 30px;
-min-width: 300px;
-}
-
-.card {
-background: #ffffff;
-border: 1px solid #e0e0e0;
-border-radius: 12px;
-padding: 25px;
-text-align: center;
-box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.cota-card h3 {
-color: #2d6a04;
-font-size: 1.4rem;
-margin-bottom: 10px;
-}
-
-.subtext {
-color: #666;
-font-size: 0.9rem;
-margin-bottom: 15px;
-}
-
-.phone-numbers {
-margin: 15px 0;
-font-weight: bold;
-font-size: 1.2rem;
-color: #333;
-}
-
-.btn-info {
-display: inline-block;
-background-color: #2d6a04;
-color: white;
-padding: 10px 20px;
-border-radius: 8px;
-cursor: pointer;
-margin-top: 15px;
-font-weight: bold;
-transition: background 0.3s;
-}
-
-.btn-info:hover {
-background-color: #1a4202;
-}
-
-#info-toggle {
-display: none;
-}
-
-.description-cota {
-display: none;
-font-size: 0.95rem;
-color: #555;
-margin-top: 15px;
-line-height: 1.5;
-background: #f1f8ed;
-padding: 15px;
-border-radius: 8px;
-}
-
-#info-toggle:checked ~ .description-cota {
-display: block;
-}
-
-.pull-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 10px;
-margin-bottom: 15px;
-}
-
-.pull-grid img {
-width: 100%;
-height: 120px;
-object-fit: cover;
-border-radius: 8px;
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.pull-card h3 {
-color: #2d6a04;
-font-size: 1.1rem;
-font-style: italic;
-margin-top: 10px;
+    color: #00cec9;
 }
 
 /* Footer */
 footer {
-background-color: #2d6a04; /* Vert */
-color: white;
-padding: 50px 20px 20px;
-text-align: center;
+    background-color: rgba(20, 20, 20, 0.8); /* Gris très sombre semi-transparent */
+    color: white;
+    padding: 50px 20px 20px;
+    text-align: center;
+    margin-top: auto;
 }
 
 .footer-header h3 {
-font-size: 1.8rem;
-margin-bottom: 5px;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: #4cd137;
 }
 
 .footer-header p {
-color: #c9e4b6;
-font-size: 1rem;
+    color: #ccc;
+    font-size: 1rem;
 }
 
 .footer-body {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 80px;
-margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    margin: 40px 0;
 }
 
 .footer-col {
-text-align: left;
+    text-align: left;
 }
 
 .footer-col h4 {
-font-size: 1.2rem;
-margin-bottom: 15px;
-color: #eaf2ff;
-border-bottom: 2px solid #58a726;
-display: inline-block;
-padding-bottom: 5px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+    border-bottom: 2px solid #4cd137;
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
 .footer-col ul {
-list-style: none;
+    list-style: none;
 }
 
 .footer-col li {
-margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .footer-col a {
-text-decoration: none;
-color: white;
-transition: color 0.3s;
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
 }
 
 .footer-col a:hover {
-color: #bceb93;
+    color: white;
 }
 
 .copyright {
-font-size: 0.9rem;
-margin-top: 30px;
-padding-top: 20px;
-border-top: 1px solid rgba(255,255,255,0.2);
-color: #d1ecc0;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #888;
 }
 
 /* Responsive pour tablette et mobile */
@@ -389,9 +316,6 @@ color: #d1ecc0;
   #menu-toggle:checked ~ .nav-links {
     display: block;
   }
-  .container {
-    flex-direction: column;
-  }
   .banner-text h2 {
     font-size: 2.5rem;
   }
@@ -401,6 +325,10 @@ color: #d1ecc0;
   .nav-barre {
     padding: 15px 20px;
     position: relative;
+  }
+  .subjects-row {
+    flex-direction: column;
+    gap: 20px;
   }
   .footer-body {
     flex-direction: column;
