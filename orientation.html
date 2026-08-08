@@ -160,58 +160,85 @@
 
           <!-- Grille des écoles (générée via JS) -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg" id="schools-grid">
-            <!-- Les cartes seront injectées ici par le JS -->
+        <!-- Card ISE-ECO -->
+        <div class="flex flex-col md:flex-row bg-white border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
+          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
+            <h3 class="text-2xl font-bold text-blue-800">ENSEA</h3>
           </div>
-          
-          <!-- Message Aucun Résultat -->
-          <div id="schools-no-results" class="hidden text-center py-xl">
-            <div class="w-16 h-16 rounded-full bg-surface-container mx-auto flex items-center justify-center mb-md">
-              <span class="material-symbols-outlined text-on-surface-variant text-[32px]">search_off</span>
-            </div>
-            <h3 class="font-headline-sm text-on-surface mb-xs">Aucune école trouvée</h3>
-            <p class="font-body-md text-on-surface-variant">Essayez d'autres mots-clés ou domaines d'études.</p>
+          <div class="flex-col flex gap-2 text-sm text-gray-800">
+            <p><strong>Composition:</strong> Écrit uniquement</p>
+            <p><strong>Frais de concours:</strong> 10 000 XOF</p>
+            <p><strong>Matières de composition:</strong> Mathématiques et Français</p>
+            <p><strong>Période de composition:</strong> Début Avril</p>
+            <p><strong>Annonce des résultats:</strong> Fin Juin</p>
+            <p><strong>Description:</strong> L'actuariat, l'économie ou encore les statistiques. Si l'un de ces domaines vous intéresse, le concours ISE-ECO de l'ENSEA est une belle opportunité qui s'offre à vous. Toutefois, il va falloir s'y connaître en séries de Fourier.</p>
           </div>
         </div>
-      </section>
 
-      <!-- FAQ Section — accordion géré par faq.js -->
-      <section class="max-w-3xl mx-auto px-sm lg:px-margin-desktop py-xl">
-        <div class="mb-lg text-center">
-          <h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Foire Aux Questions</h2>
-          <p class="font-body-md text-body-md text-on-surface-variant">Les réponses aux questions les plus fréquentes concernant l'orientation et les ressources TSA.</p>
-        </div>
-        <div class="flex flex-col gap-sm" id="faq-container">
-          <div class="bg-surface-container rounded-xl overflow-hidden faq-item shadow-sm hover:shadow-md transition-shadow">
-            <div class="p-md flex items-center justify-between faq-header">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface">Comment accéder aux documents partagés ?</h3>
-              <span class="material-symbols-outlined text-on-surface-variant faq-icon">expand_more</span>
-            </div>
-            <div class="px-md pb-md faq-content text-on-surface-variant font-body-md bg-surface-container-low pt-sm rounded-b-xl">
-              <p>L'ensemble des documents (cours, TD, annales) est accessible via l'onglet "Cours &amp; Documents". Vous devez être connecté avec votre compte étudiant pour télécharger les ressources au format PDF.</p>
-            </div>
+        <!-- Card ECC -->
+        <div class="flex flex-col md:flex-row bg-white border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
+          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
+            <h3 class="text-2xl font-bold text-green-700">Centrale</h3>
           </div>
-          <div class="bg-surface-container rounded-xl overflow-hidden faq-item shadow-sm hover:shadow-md transition-shadow">
-            <div class="p-md flex items-center justify-between faq-header">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface">Comment se préparer aux concours d'ingénieurs ?</h3>
-              <span class="material-symbols-outlined text-on-surface-variant faq-icon">expand_more</span>
-            </div>
-            <div class="px-md pb-md faq-content text-on-surface-variant font-body-md bg-surface-container-low pt-sm rounded-b-xl">
-              <p>La préparation commence dès la première année. Nous recommandons un travail régulier sur les annales disponibles dans la bibliothèque, la participation aux khôlles et l'assistance aux séances de tutorat organisées par les anciens élèves.</p>
-            </div>
-          </div>
-          <div class="bg-surface-container rounded-xl overflow-hidden faq-item shadow-sm hover:shadow-md transition-shadow">
-            <div class="p-md flex items-center justify-between faq-header">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface">Quelles sont les conditions d'admission sur titre ?</h3>
-              <span class="material-symbols-outlined text-on-surface-variant faq-icon">expand_more</span>
-            </div>
-            <div class="px-md pb-md faq-content text-on-surface-variant font-body-md bg-surface-container-low pt-sm rounded-b-xl">
-              <p>L'admission sur titre (AST) dépend des écoles. Généralement, elle requiert un excellent dossier académique durant les 3 années de TSA, des lettres de recommandation et la réussite à un entretien de motivation. Consultez la section "Passerelles" pour plus de détails par établissement.</p>
-            </div>
+          <div class="flex-col flex gap-2 text-sm text-gray-800">
+            <p><strong>Composition:</strong> Étude de dossiers, Écrit et Entretien de motivation</p>
+            <p><strong>Frais de concours:</strong> 12 000 XOF</p>
+            <p><strong>Matières de composition:</strong> Mathématiques, Physiques et Anglais</p>
+            <p><strong>Période de composition:</strong> Mai</p>
+            <p><strong>Annonce des résultats:</strong> Juin</p>
+            <p><strong>Description:</strong> L'École Centrale Casablanca (ECC Casablanca) est une école d'ingénieurs dotée d'une pédagogie innovante, de formations pluridisciplinaires et d'une grande ouverture au monde.</p>
           </div>
         </div>
-      </section>
 
-    </div>
+        <!-- Card EMINES -->
+        <div class="flex flex-col md:flex-row bg-white border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
+          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center bg-black rounded">
+            <h3 class="text-xl font-bold text-white">EMINES</h3>
+          </div>
+          <div class="flex-col flex gap-2 text-sm text-gray-800">
+            <p><strong>Composition:</strong> Étude de dossiers, Oral et Entretien de motivation</p>
+            <p><strong>Frais de concours:</strong> 0 XOF</p>
+            <p><strong>Matières de composition:</strong> Mathématiques et Physiques</p>
+            <p><strong>Période de composition:</strong> Début Avril</p>
+            <p><strong>Annonce des résultats:</strong> Fin Juin</p>
+            <p><strong>Description:</strong> EMINES - School of Industrial Management est une école d'ingénieurs de l'Université Mohammed VI Polytechnique de Benguerir...</p>
+          </div>
+        </div>
+
+        <!-- Card BCEAS -->
+        <div class="flex flex-col md:flex-row bg-white border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
+          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
+            <h3 class="text-2xl font-bold text-red-600">BCEAS</h3>
+          </div>
+          <div class="flex-col flex gap-2 text-sm text-gray-800">
+            <p><strong>Composition:</strong> Étude de dossiers, Oral et Entretien de motivation</p>
+            <p><strong>Frais de concours:</strong> 40€ - 20€ par école</p>
+            <p><strong>Matières de composition:</strong> Mathématiques et Physiques</p>
+            <p><strong>Période de composition:</strong> Mi-Mai</p>
+            <p><strong>Annonce des résultats:</strong> Fin Juin</p>
+            <p><strong>Description:</strong> Depuis 2014, cinq écoles qui offrent une formation d'ingénieur dans les domaines de la finance, de l'actuariat ou encore des assurances se sont mises en commun pour proposer un seul et même concours : BCEAS.</p>
+          </div>
+        </div>
+
+        <!-- Card EGA -->
+        <div class="flex flex-col md:flex-row bg-white border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
+          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
+            <h3 class="text-3xl font-bold text-blue-600">ega</h3>
+          </div>
+          <div class="flex-col flex gap-2 text-sm text-gray-800">
+            <p><strong>Écoles:</strong> EFREI, ESIE, EIVP, ENSIM, ESGT, ISTOM, ITECH-LYON et ISMANS CESE</p>
+            <p><strong>Composition:</strong> Écrit et Entretien de motivation</p>
+            <p><strong>Frais de concours:</strong> 50 000 XOF</p>
+            <p><strong>Matières de composition:</strong> Mathématiques, Physiques, Informatique, Anglais et Français</p>
+            <p><strong>Période de composition:</strong> Mars</p>
+            <p><strong>Annonce des résultats:</strong> Avril/Mai</p>
+            <p><strong>Description:</strong> Le concours Euro Graduation Access appelé EGA a pour objectif de recruter des étudiants de bon niveau scientifique souhaitant effectuer des études supérieures dans l'une des 10 grandes écoles d'ingénieurs françaises membres du concours.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
