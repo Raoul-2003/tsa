@@ -4,10 +4,10 @@ window.tailwind.config = {
   theme: {
     extend: {
       colors: {
-        /* ── Couleur principale de marque : Terre foncée ── */
-        primary:   '#5C4033',
-        secondary: '#8B6B4A',
-        tertiary:  '#B8894A',
+        /* Couleur principale de marque : Vert Amicale */
+        primary:   '#2d6a04',
+        secondary: '#3b8a05',
+        tertiary:  '#4a9e10',
         
         /* Couleur d'accent d'origine (utilisée dans le logo) */
         'brand-green': '#2d6a04',
