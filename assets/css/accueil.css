@@ -44,7 +44,7 @@
 }
 
 .highlight {
-    color: #d4af37; /* Jaune or */
+    color: #2d6a04; /* Vert Amicale */
 }
 
 /* Flex rows pour sections */
@@ -105,7 +105,7 @@
 
 .btn-yellow {
     display: inline-block;
-    background-color: #d4af37;
+    background-color: #2d6a04;
     color: white;
     padding: 10px 25px;
     border-radius: 25px;
@@ -115,7 +115,7 @@
 }
 
 .btn-yellow:hover {
-    background-color: #bfa032;
+    background-color: #1a4202;
 }
 
 /* Nos activités Grid */
