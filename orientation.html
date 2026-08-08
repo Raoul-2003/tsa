@@ -69,177 +69,241 @@
   </header>
 
   <!-- ========================================= MAIN ========================================= -->
-  <main class="rela    <!-- Hero Banner (Crane) -->
-    <section class="relative w-full h-[60vh] flex items-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541888081622-cbf544e3f46b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');">
-      <div class="absolute inset-0 bg-black/40"></div>
-      <div class="relative z-10 max-w-max-width mx-auto px-sm lg:px-margin-desktop w-full text-white border-b border-white pb-4 mb-8">
-        <h1 class="text-4xl md:text-5xl font-bold tracking-wider uppercase mb-2">AMICALE TSA</h1>
-        <p class="text-xl md:text-2xl font-light">Concours</p>
+  <main class="relative pt-16 min-h-screen bg-[#F4F6F9] pb-24">
+    <!-- Hero Banner (Crane) -->
+    <section class="relative w-full h-[60vh] flex flex-col items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541888081622-cbf544e3f46b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 flex flex-col items-center text-white">
+        <h1 class="text-5xl md:text-7xl font-bold tracking-widest uppercase mb-4 font-serif">AMICALE TSA</h1>
+        <div class="w-2/3 h-[2px] bg-white mb-4"></div>
+        <p class="text-2xl md:text-3xl font-light italic">Concours</p>
       </div>
     </section>
 
     <!-- SECTION: CONCOURS INP-HB ("Gbinzin") -->
-    <section class="max-w-[1200px] mx-auto px-sm lg:px-margin-desktop mt-12 mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 uppercase text-gray-800">CONCOURS INP-HB ("Gbinzin")</h2>
+    <section class="max-w-[1100px] mx-auto px-sm lg:px-margin-desktop mt-16 mb-20">
+      <div class="flex items-center gap-3 mb-10">
+        <div class="w-2 h-8 bg-blue-600 rounded"></div>
+        <h2 class="text-xl md:text-2xl font-bold uppercase text-gray-800">CONCOURS INP-HB ("Gbinzin")</h2>
+      </div>
       
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-6">
         <!-- Card G2C -->
-        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
-          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
-            <h3 class="text-2xl font-bold text-gray-800">G2C</h3>
+        <div class="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="md:w-1/4 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-gray-100 bg-[#FAFBFC]">
+            <h3 class="text-3xl font-black text-gray-800 tracking-wider">G2C</h3>
           </div>
-          <div class="flex-col flex gap-2 text-sm text-gray-800">
-            <p><strong>École:</strong> ESTP, ESFE</p>
-            <p><strong>Frais de concours:</strong> 20 000 XOF</p>
-            <p><strong>Composition:</strong> Écrit uniquement</p>
-            <p><strong>Matières de composition:</strong> Mathématiques, Physiques-Chimie, Informatique, Sciences Industrielles, Français et Anglais</p>
-            <p><strong>Période de composition:</strong> mi-Mai</p>
-            <p><strong>Annonce des résultats:</strong> Juillet</p>
-            <p><strong>Description:</strong> Mines, Pétrole, Bâtiment, Urbanisme... À la fin de votre cursus vous aurez toutes les capacités nécessaires pour intégrer le monde actif dans l'un de ces domaines.</p>
+          <div class="md:w-3/4 p-6 md:p-8">
+            <h3 class="text-2xl font-bold text-blue-700 mb-6">Concours G2C</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-700 leading-relaxed">
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">École :</span> ESTP, ESFE</p>
+                <p><span class="font-bold text-gray-900">Frais de concours :</span> 20 000 XOF</p>
+                <p><span class="font-bold text-gray-900">Composition :</span> Écrit uniquement</p>
+                <p><span class="font-bold text-gray-900">Matières de composition :</span> Mathématiques, Physiques-Chimie, Informatique, Sciences Industrielles, Français et Anglais</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">Période de composition :</span> mi-Mai</p>
+                <p><span class="font-bold text-gray-900">Annonce des résultats :</span> Juillet</p>
+                <p><span class="font-bold text-gray-900">Description :</span> Mines, Pétrole, Bâtiment, Urbanisme... À la fin de votre cursus vous aurez toutes les capacités nécessaires pour intégrer le monde actif dans l'un de ces domaines.</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Card CAE -->
-        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
-          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
-            <h3 class="text-2xl font-bold text-green-700">CAE</h3>
+        <div class="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="md:w-1/4 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-gray-100 bg-[#FAFBFC]">
+            <h3 class="text-3xl font-black text-green-700 tracking-wider">CAE</h3>
           </div>
-          <div class="flex-col flex gap-2 text-sm text-gray-800">
-            <p><strong>École:</strong> ESCAE</p>
-            <p><strong>Filières:</strong> HEA et S.I</p>
-            <p><strong>Frais de concours:</strong> 20 000 XOF</p>
-            <p><strong>Composition:</strong> Écrit uniquement</p>
-            <p><strong>Matières de composition:</strong> Mathématiques, Français et Anglais</p>
-            <p><strong>Période de composition:</strong> mi-Mai</p>
-            <p><strong>Annonce des résultats:</strong> Juillet</p>
-            <p><strong>Description:</strong> Bien qu'étant étudiants technos vous avez aussi la possibilité bien que vous n'ayez pas forcément des notions en économie d'intégrer l'ESCAE tout comme un ECS.</p>
+          <div class="md:w-3/4 p-6 md:p-8">
+            <h3 class="text-2xl font-bold text-blue-700 mb-6">Concours CAE</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-700 leading-relaxed">
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">École :</span> ESCAE</p>
+                <p><span class="font-bold text-gray-900">Filières :</span> HEA et S.I</p>
+                <p><span class="font-bold text-gray-900">Frais de concours :</span> 20 000 XOF</p>
+                <p><span class="font-bold text-gray-900">Composition :</span> Écrit uniquement</p>
+                <p><span class="font-bold text-gray-900">Matières de composition :</span> Mathématiques, Français et Anglais</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">Période de composition :</span> mi-Mai</p>
+                <p><span class="font-bold text-gray-900">Annonce des résultats :</span> Juillet</p>
+                <p><span class="font-bold text-gray-900">Description :</span> Bien qu'étant étudiants technos vous avez aussi la possibilité bien que vous n'ayez pas forcément des notions en économie d'intégrer l'ESCAE tout comme un ECS.</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Card A2GP -->
-        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
-          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
-            <h3 class="text-2xl font-bold text-orange-600">A2GP</h3>
+        <div class="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="md:w-1/4 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-gray-100 bg-[#FAFBFC]">
+            <h3 class="text-3xl font-black text-orange-600 tracking-wider">A2GP</h3>
           </div>
-          <div class="flex-col flex gap-2 text-sm text-gray-800">
-            <p><strong>École:</strong> ESMG, ESA</p>
-            <p><strong>Filières:</strong> Agronomie, Mines, Pétrole</p>
-            <p><strong>Frais de concours:</strong> 20 000 XOF</p>
-            <p><strong>Composition:</strong> Écrit uniquement</p>
-            <p><strong>Matières de composition:</strong> Mathématiques, Physique, Chimie, Informatique, Français, Anglais</p>
-            <p><strong>Période de composition:</strong> mi-Mai</p>
-            <p><strong>Annonce des résultats:</strong> Juillet</p>
+          <div class="md:w-3/4 p-6 md:p-8">
+            <h3 class="text-2xl font-bold text-blue-700 mb-6">Concours A2GP</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-700 leading-relaxed">
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">École :</span> ESMG, ESA</p>
+                <p><span class="font-bold text-gray-900">Filières :</span> Agronomie, Mines, Pétrole</p>
+                <p><span class="font-bold text-gray-900">Frais de concours :</span> 20 000 XOF</p>
+                <p><span class="font-bold text-gray-900">Composition :</span> Écrit uniquement</p>
+                <p><span class="font-bold text-gray-900">Matières de composition :</span> Mathématiques, Physique, Chimie, Informatique, Français, Anglais</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">Période de composition :</span> mi-Mai</p>
+                <p><span class="font-bold text-gray-900">Annonce des résultats :</span> Juillet</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Card STIC -->
-        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
-          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
-            <h3 class="text-2xl font-bold text-gray-800">STIC</h3>
+        <div class="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="md:w-1/4 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-gray-100 bg-[#FAFBFC]">
+            <h3 class="text-3xl font-black text-gray-800 tracking-wider">STIC</h3>
           </div>
-          <div class="flex-col flex gap-2 text-sm text-gray-800">
-            <p><strong>École:</strong> ESI</p>
-            <p><strong>Filières:</strong> STIC (Sciences et Technologies de l'Information et de la Communication)</p>
-            <p><strong>Frais de concours:</strong> 20 000 XOF</p>
-            <p><strong>Composition:</strong> Écrit uniquement</p>
-            <p><strong>Matières de composition:</strong> Mathématiques, Physiques, Informatique, Sciences Industrielles, Français et Anglais</p>
-            <p><strong>Période de composition:</strong> mi-Mai</p>
-            <p><strong>Annonce des résultats:</strong> Juillet</p>
+          <div class="md:w-3/4 p-6 md:p-8">
+            <h3 class="text-2xl font-bold text-blue-700 mb-6">Concours STIC</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-700 leading-relaxed">
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">École :</span> ESI</p>
+                <p><span class="font-bold text-gray-900">Filières :</span> STIC (Sciences et Technologies de l'Information et de la Communication)</p>
+                <p><span class="font-bold text-gray-900">Frais de concours :</span> 20 000 XOF</p>
+                <p><span class="font-bold text-gray-900">Composition :</span> Écrit uniquement</p>
+                <p><span class="font-bold text-gray-900">Matières de composition :</span> Mathématiques, Physiques, Informatique, Sciences Industrielles, Français et Anglais</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">Période de composition :</span> mi-Mai</p>
+                <p><span class="font-bold text-gray-900">Annonce des résultats :</span> Juillet</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SECTION: CONCOURS EXTERIEUR -->
-    <section class="max-w-[1200px] mx-auto px-sm lg:px-margin-desktop mt-16 mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 uppercase text-gray-800">CONCOURS EXTÉRIEUR</h2>
+    <section class="max-w-[1100px] mx-auto px-sm lg:px-margin-desktop mt-16 mb-20">
+      <div class="flex items-center gap-3 mb-10">
+        <div class="w-2 h-8 bg-blue-600 rounded"></div>
+        <h2 class="text-xl md:text-2xl font-bold uppercase text-gray-800">CONCOURS EXTÉRIEUR</h2>
+      </div>
       
-      <div class="flex flex-col gap-4">
-        
+      <div class="flex flex-col gap-6">
         <!-- Card ISE-ECO -->
-        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
-          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
-            <h3 class="text-2xl font-bold text-blue-800">ENSEA</h3>
+        <div class="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="md:w-1/4 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-gray-100 bg-[#FAFBFC]">
+            <h3 class="text-3xl font-black text-blue-800 tracking-wider">ENSEA</h3>
           </div>
-          <div class="flex-col flex gap-2 text-sm text-gray-800">
-            <p><strong>Composition:</strong> Écrit uniquement</p>
-            <p><strong>Frais de concours:</strong> 10 000 XOF</p>
-            <p><strong>Matières de composition:</strong> Mathématiques et Français</p>
-            <p><strong>Période de composition:</strong> Début Avril</p>
-            <p><strong>Annonce des résultats:</strong> Fin Juin</p>
-            <p><strong>Description:</strong> L'actuariat, l'économie ou encore les statistiques. Si l'un de ces domaines vous intéresse, le concours ISE-ECO de l'ENSEA est une belle opportunité qui s'offre à vous. Toutefois, il va falloir s'y connaître en séries de Fourier.</p>
+          <div class="md:w-3/4 p-6 md:p-8">
+            <h3 class="text-2xl font-bold text-blue-700 mb-6">Concours ISE-ECO</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-700 leading-relaxed">
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">Composition :</span> Écrit uniquement</p>
+                <p><span class="font-bold text-gray-900">Frais de concours :</span> 10 000 XOF</p>
+                <p><span class="font-bold text-gray-900">Matières de composition :</span> Mathématiques et Français</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">Période de composition :</span> Début Avril</p>
+                <p><span class="font-bold text-gray-900">Annonce des résultats :</span> Fin Juin</p>
+                <p><span class="font-bold text-gray-900">Description :</span> L'actuariat, l'économie ou encore les statistiques. Si l'un de ces domaines vous intéresse, le concours ISE-ECO de l'ENSEA est une belle opportunité qui s'offre à vous. Toutefois, il va falloir s'y connaître en séries de Fourier.</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Card ECC -->
-        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
-          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
-            <h3 class="text-2xl font-bold text-green-700">Centrale</h3>
+        <div class="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="md:w-1/4 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-gray-100 bg-[#FAFBFC]">
+            <h3 class="text-3xl font-black text-green-700 tracking-wider">Centrale</h3>
           </div>
-          <div class="flex-col flex gap-2 text-sm text-gray-800">
-            <p><strong>Composition:</strong> Étude de dossiers, Écrit et Entretien de motivation</p>
-            <p><strong>Frais de concours:</strong> 12 000 XOF</p>
-            <p><strong>Matières de composition:</strong> Mathématiques, Physiques et Anglais</p>
-            <p><strong>Période de composition:</strong> Mai</p>
-            <p><strong>Annonce des résultats:</strong> Juin</p>
-            <p><strong>Description:</strong> L'École Centrale Casablanca (ECC Casablanca) est une école d'ingénieurs dotée d'une pédagogie innovante, de formations pluridisciplinaires et d'une grande ouverture au monde.</p>
+          <div class="md:w-3/4 p-6 md:p-8">
+            <h3 class="text-2xl font-bold text-blue-700 mb-6">Concours ECC</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-700 leading-relaxed">
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">Composition :</span> Étude de dossiers, Écrit et Entretien de motivation</p>
+                <p><span class="font-bold text-gray-900">Frais de concours :</span> 12 000 XOF</p>
+                <p><span class="font-bold text-gray-900">Matières de composition :</span> Mathématiques, Physiques et Anglais</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">Période de composition :</span> Mai</p>
+                <p><span class="font-bold text-gray-900">Annonce des résultats :</span> Juin</p>
+                <p><span class="font-bold text-gray-900">Description :</span> L'École Centrale Casablanca (ECC Casablanca) est une école d'ingénieurs dotée d'une pédagogie innovante, de formations pluridisciplinaires et d'une grande ouverture au monde.</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Card EMINES -->
-        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
-          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center bg-black rounded">
-            <h3 class="text-xl font-bold text-white">EMINES</h3>
+        <div class="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="md:w-1/4 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-gray-100 bg-black">
+            <h3 class="text-3xl font-black text-white tracking-wider">EMINES</h3>
           </div>
-          <div class="flex-col flex gap-2 text-sm text-gray-800">
-            <p><strong>Composition:</strong> Étude de dossiers, Oral et Entretien de motivation</p>
-            <p><strong>Frais de concours:</strong> 0 XOF</p>
-            <p><strong>Matières de composition:</strong> Mathématiques et Physiques</p>
-            <p><strong>Période de composition:</strong> Début Avril</p>
-            <p><strong>Annonce des résultats:</strong> Fin Juin</p>
-            <p><strong>Description:</strong> EMINES - School of Industrial Management est une école d'ingénieurs de l'Université Mohammed VI Polytechnique de Benguerir...</p>
+          <div class="md:w-3/4 p-6 md:p-8">
+            <h3 class="text-2xl font-bold text-blue-700 mb-6">EMINES</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-700 leading-relaxed">
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">Composition :</span> Étude de dossiers, Oral et Entretien de motivation</p>
+                <p><span class="font-bold text-gray-900">Frais de concours :</span> 0 XOF</p>
+                <p><span class="font-bold text-gray-900">Matières de composition :</span> Mathématiques et Physiques</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">Période de composition :</span> Début Avril</p>
+                <p><span class="font-bold text-gray-900">Annonce des résultats :</span> Fin Juin</p>
+                <p><span class="font-bold text-gray-900">Description :</span> EMINES - School of Industrial Management est une école d'ingénieurs de l'Université Mohammed VI Polytechnique de Benguerir...</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Card BCEAS -->
-        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
-          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
-            <h3 class="text-2xl font-bold text-red-600">BCEAS</h3>
+        <div class="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="md:w-1/4 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-gray-100 bg-[#FAFBFC]">
+            <h3 class="text-3xl font-black text-red-600 tracking-wider">BCEAS</h3>
           </div>
-          <div class="flex-col flex gap-2 text-sm text-gray-800">
-            <p><strong>Composition:</strong> Étude de dossiers, Oral et Entretien de motivation</p>
-            <p><strong>Frais de concours:</strong> 40€ - 20€ par école</p>
-            <p><strong>Matières de composition:</strong> Mathématiques et Physiques</p>
-            <p><strong>Période de composition:</strong> Mi-Mai</p>
-            <p><strong>Annonce des résultats:</strong> Fin Juin</p>
-            <p><strong>Description:</strong> Depuis 2014, cinq écoles qui offrent une formation d'ingénieur dans les domaines de la finance, de l'actuariat ou encore des assurances se sont mises en commun pour proposer un seul et même concours : BCEAS.</p>
+          <div class="md:w-3/4 p-6 md:p-8">
+            <h3 class="text-2xl font-bold text-blue-700 mb-6">Concours BCEAS</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-700 leading-relaxed">
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">Composition :</span> Étude de dossiers, Oral et Entretien de motivation</p>
+                <p><span class="font-bold text-gray-900">Frais de concours :</span> 40€ - 20€ par école</p>
+                <p><span class="font-bold text-gray-900">Matières de composition :</span> Mathématiques et Physiques</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">Période de composition :</span> Mi-Mai</p>
+                <p><span class="font-bold text-gray-900">Annonce des résultats :</span> Fin Juin</p>
+                <p><span class="font-bold text-gray-900">Description :</span> Depuis 2014, cinq écoles qui offrent une formation d'ingénieur dans les domaines de la finance, de l'actuariat ou encore des assurances se sont mises en commun pour proposer un seul et même concours : BCEAS.</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Card EGA -->
-        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
-          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
-            <h3 class="text-3xl font-bold text-blue-600">ega</h3>
+        <div class="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="md:w-1/4 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-gray-100 bg-[#FAFBFC]">
+            <h3 class="text-4xl font-black text-blue-600 tracking-wider lowercase">ega</h3>
           </div>
-          <div class="flex-col flex gap-2 text-sm text-gray-800">
-            <p><strong>Écoles:</strong> EFREI, ESIE, EIVP, ENSIM, ESGT, ISTOM, ITECH-LYON et ISMANS CESE</p>
-            <p><strong>Composition:</strong> Écrit et Entretien de motivation</p>
-            <p><strong>Frais de concours:</strong> 50 000 XOF</p>
-            <p><strong>Matières de composition:</strong> Mathématiques, Physiques, Informatique, Anglais et Français</p>
-            <p><strong>Période de composition:</strong> Mars</p>
-            <p><strong>Annonce des résultats:</strong> Avril/Mai</p>
-            <p><strong>Description:</strong> Le concours Euro Graduation Access appelé EGA a pour objectif de recruter des étudiants de bon niveau scientifique souhaitant effectuer des études supérieures dans l'une des 10 grandes écoles d'ingénieurs françaises membres du concours.</p>
-          </div>
-        </div>
-
-      </div>
-    </section> d'ingénieurs françaises membres du concours.</p>
+          <div class="md:w-3/4 p-6 md:p-8">
+            <h3 class="text-2xl font-bold text-blue-700 mb-6">EGA</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-700 leading-relaxed">
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">Écoles :</span> EFREI, ESIE, EIVP, ENSIM, ESGT, ISTOM, ITECH-LYON et ISMANS CESE</p>
+                <p><span class="font-bold text-gray-900">Composition :</span> Écrit et Entretien de motivation</p>
+                <p><span class="font-bold text-gray-900">Frais de concours :</span> 50 000 XOF</p>
+                <p><span class="font-bold text-gray-900">Matières de composition :</span> Mathématiques, Physiques, Informatique, Anglais et Français</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <p><span class="font-bold text-gray-900">Période de composition :</span> Mars</p>
+                <p><span class="font-bold text-gray-900">Annonce des résultats :</span> Avril/Mai</p>
+                <p><span class="font-bold text-gray-900">Description :</span> Le concours Euro Graduation Access appelé EGA a pour objectif de recruter des étudiants de bon niveau scientifique souhaitant effectuer des études supérieures dans l'une des 10 grandes écoles d'ingénieurs françaises membres du concours.</p>
+              </div>
+            </div>
           </div>
         </div>
 
       </div>
     </section>
-
   </main>
 
   <!-- Footer -->
