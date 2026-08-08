@@ -69,99 +69,95 @@
   </header>
 
   <!-- ========================================= MAIN ========================================= -->
-  <main class="relative pt-16 min-h-screen">
-    <div class="flex flex-col w-full relative">
+  <main class="rela    <!-- Hero Banner (Crane) -->
+    <section class="relative w-full h-[60vh] flex items-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541888081622-cbf544e3f46b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="relative z-10 max-w-max-width mx-auto px-sm lg:px-margin-desktop w-full text-white border-b border-white pb-4 mb-8">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-wider uppercase mb-2">AMICALE TSA</h1>
+        <p class="text-xl md:text-2xl font-light">Concours</p>
+      </div>
+    </section>
 
-      <!-- Hero + Bento Grid -->
-      <section class="max-w-max-width mx-auto px-sm lg:px-margin-desktop py-xl">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-xl">
-          <div class="md:col-span-12 flex flex-col items-center text-center">
-            <h1 class="font-display text-display text-primary mb-md">Guide d'Orientation TSA</h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-              Votre feuille de route vers l'excellence. Découvrez les parcours, les concours et les stratégies pour intégrer les meilleures écoles d'ingénieurs.
-            </p>
+    <!-- SECTION: CONCOURS INP-HB ("Gbinzin") -->
+    <section class="max-w-[1200px] mx-auto px-sm lg:px-margin-desktop mt-12 mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 uppercase text-gray-800">CONCOURS INP-HB ("Gbinzin")</h2>
+      
+      <div class="flex flex-col gap-4">
+        <!-- Card G2C -->
+        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
+          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
+            <h3 class="text-2xl font-bold text-gray-800">G2C</h3>
+          </div>
+          <div class="flex-col flex gap-2 text-sm text-gray-800">
+            <p><strong>École:</strong> ESTP, ESFE</p>
+            <p><strong>Frais de concours:</strong> 20 000 XOF</p>
+            <p><strong>Composition:</strong> Écrit uniquement</p>
+            <p><strong>Matières de composition:</strong> Mathématiques, Physiques-Chimie, Informatique, Sciences Industrielles, Français et Anglais</p>
+            <p><strong>Période de composition:</strong> mi-Mai</p>
+            <p><strong>Annonce des résultats:</strong> Juillet</p>
+            <p><strong>Description:</strong> Mines, Pétrole, Bâtiment, Urbanisme... À la fin de votre cursus vous aurez toutes les capacités nécessaires pour intégrer le monde actif dans l'un de ces domaines.</p>
           </div>
         </div>
 
-        <!-- Bento Grid -->
-        <div id="orientation-cards" class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-min"></div>
+        <!-- Card CAE -->
+        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
+          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
+            <h3 class="text-2xl font-bold text-green-700">CAE</h3>
+          </div>
+          <div class="flex-col flex gap-2 text-sm text-gray-800">
+            <p><strong>École:</strong> ESCAE</p>
+            <p><strong>Filières:</strong> HEA et S.I</p>
+            <p><strong>Frais de concours:</strong> 20 000 XOF</p>
+            <p><strong>Composition:</strong> Écrit uniquement</p>
+            <p><strong>Matières de composition:</strong> Mathématiques, Français et Anglais</p>
+            <p><strong>Période de composition:</strong> mi-Mai</p>
+            <p><strong>Annonce des résultats:</strong> Juillet</p>
+            <p><strong>Description:</strong> Bien qu'étant étudiants technos vous avez aussi la possibilité bien que vous n'ayez pas forcément des notions en économie d'intégrer l'ESCAE tout comme un ECS.</p>
+          </div>
+        </div>
+
+        <!-- Card A2GP -->
+        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
+          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
+            <h3 class="text-2xl font-bold text-orange-600">A2GP</h3>
+          </div>
+          <div class="flex-col flex gap-2 text-sm text-gray-800">
+            <p><strong>École:</strong> ESMG, ESA</p>
+            <p><strong>Filières:</strong> Agronomie, Mines, Pétrole</p>
+            <p><strong>Frais de concours:</strong> 20 000 XOF</p>
+            <p><strong>Composition:</strong> Écrit uniquement</p>
+            <p><strong>Matières de composition:</strong> Mathématiques, Physique, Chimie, Informatique, Français, Anglais</p>
+            <p><strong>Période de composition:</strong> mi-Mai</p>
+            <p><strong>Annonce des résultats:</strong> Juillet</p>
+          </div>
+        </div>
+
+        <!-- Card STIC -->
+        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
+          <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
+            <h3 class="text-2xl font-bold text-gray-800">STIC</h3>
+          </div>
+          <div class="flex-col flex gap-2 text-sm text-gray-800">
+            <p><strong>École:</strong> ESI</p>
+            <p><strong>Filières:</strong> STIC (Sciences et Technologies de l'Information et de la Communication)</p>
+            <p><strong>Frais de concours:</strong> 20 000 XOF</p>
+            <p><strong>Composition:</strong> Écrit uniquement</p>
+            <p><strong>Matières de composition:</strong> Mathématiques, Physiques, Informatique, Sciences Industrielles, Français et Anglais</p>
+            <p><strong>Période de composition:</strong> mi-Mai</p>
+            <p><strong>Annonce des résultats:</strong> Juillet</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: CONCOURS EXTERIEUR -->
+    <section class="max-w-[1200px] mx-auto px-sm lg:px-margin-desktop mt-16 mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 uppercase text-gray-800">CONCOURS EXTÉRIEUR</h2>
+      
+      <div class="flex flex-col gap-4">
         
-        <!-- Details Panel -->
-        <div id="orientation-details" class="mt-xl hidden"></div>
-      </section>
-
-      <!-- Timeline Section -->
-      <section class="w-full bg-surface-container-low py-xl relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4"></div>
-        <div class="max-w-max-width mx-auto px-sm lg:px-margin-desktop relative z-10">
-          <div class="mb-xl text-center">
-            <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-base block">Le Parcours</span>
-            <h2 class="font-headline-lg text-headline-lg text-on-surface">Timeline Académique</h2>
-          </div>
-          <div class="relative">
-            <div class="absolute top-1/2 left-0 w-full h-[2px] bg-outline-variant/30 hidden md:block -translate-y-1/2 z-0"></div>
-            <div class="absolute top-0 left-8 w-[2px] h-full bg-outline-variant/30 md:hidden z-0"></div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-lg relative z-10">
-              <div class="flex md:flex-col items-center gap-md group">
-                <div class="w-16 h-16 rounded-full bg-surface-container flex flex-col items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-white shrink-0 relative">
-                  <span class="font-headline-sm text-headline-sm">1</span>
-                  <div class="absolute inset-0 rounded-full border border-primary/20 scale-110 animate-ping opacity-0 group-hover:opacity-100"></div>
-                </div>
-                <div class="text-left md:text-center mt-0 md:mt-sm">
-                  <h4 class="font-headline-sm text-headline-sm text-on-surface mb-base">TS1</h4>
-                  <p class="font-label-md text-label-md text-primary mb-1">Tronc commun</p>
-                  <p class="font-body-md text-sm text-on-surface-variant max-w-[200px] mx-auto">Première étape du parcours avec acquisition des bases communes.</p>
-                </div>
-              </div>
-              <div class="flex md:flex-col items-center gap-md group">
-                <div class="w-16 h-16 rounded-full bg-surface-container flex flex-col items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-white shrink-0">
-                  <span class="font-headline-sm text-headline-sm">2</span>
-                </div>
-                <div class="text-left md:text-center mt-0 md:mt-sm">
-                  <h4 class="font-headline-sm text-headline-sm text-on-surface mb-base">TS2</h4>
-                  <p class="font-label-md text-label-md text-primary mb-1">Tronc commun</p>
-                  <p class="font-body-md text-sm text-on-surface-variant max-w-[200px] mx-auto">Poursuite du tronc commun et approfondissement des connaissances.</p>
-                </div>
-              </div>
-              <div class="flex md:flex-col items-center gap-md group">
-                <div class="w-16 h-16 rounded-full bg-surface-container flex flex-col items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary group-hover:text-white shrink-0">
-                  <span class="font-headline-sm text-headline-sm">3</span>
-                </div>
-                <div class="text-left md:text-center mt-0 md:mt-sm">
-                  <h4 class="font-headline-sm text-headline-sm text-on-surface mb-base">TS3</h4>
-                  <p class="font-label-md text-label-md text-primary mb-1">Spécialisation &amp; Projets</p>
-                  <p class="font-body-md text-sm text-on-surface-variant max-w-[200px] mx-auto">Année consacrée à la spécialisation et à la réalisation de projets.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Écoles Extérieures Section -->
-      <section class="w-full bg-surface py-xl border-y border-outline-variant/30" id="ecoles-exterieures">
-        <div class="max-w-max-width mx-auto px-sm lg:px-margin-desktop">
-          <div class="text-center mb-lg">
-            <span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest mb-base block">Poursuite d'études</span>
-            <h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Écoles & Formations accessibles</h2>
-            <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">Découvrez les opportunités d'intégration dans les grandes écoles et universités partenaires après votre formation TSA.</p>
-          </div>
-
-          <!-- Barre de recherche -->
-          <div class="max-w-xl mx-auto mb-xl relative group">
-            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <span class="material-symbols-outlined text-on-surface-variant">search</span>
-            </div>
-            <input type="text" id="school-search" class="w-full h-14 pl-12 pr-4 rounded-xl bg-surface-container border border-outline-variant focus:border-tertiary focus:ring-2 focus:ring-tertiary/20 focus:outline-none transition-all font-body-md text-on-surface shadow-sm" placeholder="Rechercher une école, un domaine (ex: Agronomie, INP-HB)...">
-            <div id="school-search-clear" class="absolute inset-y-0 right-0 pr-4 flex items-center cursor-pointer hidden text-on-surface-variant hover:text-error transition-colors">
-              <span class="material-symbols-outlined">close</span>
-            </div>
-          </div>
-
-          <!-- Grille des écoles (générée via JS) -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg" id="schools-grid">
         <!-- Card ISE-ECO -->
-        <div class="flex flex-col md:flex-row bg-white border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
+        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
           <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
             <h3 class="text-2xl font-bold text-blue-800">ENSEA</h3>
           </div>
@@ -176,7 +172,7 @@
         </div>
 
         <!-- Card ECC -->
-        <div class="flex flex-col md:flex-row bg-white border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
+        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
           <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
             <h3 class="text-2xl font-bold text-green-700">Centrale</h3>
           </div>
@@ -191,7 +187,7 @@
         </div>
 
         <!-- Card EMINES -->
-        <div class="flex flex-col md:flex-row bg-white border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
+        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
           <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center bg-black rounded">
             <h3 class="text-xl font-bold text-white">EMINES</h3>
           </div>
@@ -206,7 +202,7 @@
         </div>
 
         <!-- Card BCEAS -->
-        <div class="flex flex-col md:flex-row bg-white border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
+        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
           <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
             <h3 class="text-2xl font-bold text-red-600">BCEAS</h3>
           </div>
@@ -221,7 +217,7 @@
         </div>
 
         <!-- Card EGA -->
-        <div class="flex flex-col md:flex-row bg-white border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
+        <div class="flex flex-col md:flex-row bg-[#f9fafb] border border-gray-300 rounded-lg overflow-hidden p-6 gap-8 shadow-sm">
           <div class="flex-shrink-0 w-32 h-32 flex items-center justify-center">
             <h3 class="text-3xl font-bold text-blue-600">ega</h3>
           </div>
@@ -233,6 +229,11 @@
             <p><strong>Période de composition:</strong> Mars</p>
             <p><strong>Annonce des résultats:</strong> Avril/Mai</p>
             <p><strong>Description:</strong> Le concours Euro Graduation Access appelé EGA a pour objectif de recruter des étudiants de bon niveau scientifique souhaitant effectuer des études supérieures dans l'une des 10 grandes écoles d'ingénieurs françaises membres du concours.</p>
+          </div>
+        </div>
+
+      </div>
+    </section> d'ingénieurs françaises membres du concours.</p>
           </div>
         </div>
 
